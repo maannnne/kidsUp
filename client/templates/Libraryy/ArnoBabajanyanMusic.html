@@ -1,0 +1,40 @@
+<template name='ArnoBabadjanianMusic'>
+    {{#if currentUser}}
+        <script>
+            document.title= "Arno Babajanyan Music";
+        </script>
+        <div class='container'>
+            <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Music"}}</a>
+            <a href="{{pathFor route='arno-babajanyan'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Babajanyan"}}</a>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Arno Babadjanian - Melody"}}</h3>
+                <audio controls>
+                    <source src='/music/arno-babadjanian-melody.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Arno Babadjanian - Dreams"}}</h3>
+                <audio controls>
+                    <source src='/music/arno-babadjanian-dreams.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Arno Babadjanian - Elegy"}}</h3>
+                <audio controls>
+                    <source src='/music/arno-babadjanian-elegy.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+        </div>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>

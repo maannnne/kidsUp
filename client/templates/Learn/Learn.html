@@ -1,0 +1,19 @@
+<template name="Learn">
+    {{#if currentUser}}
+        <script>
+            document.title="Learn";
+        </script>
+        <h3>{{_ "Learn"}}</h3>
+        <hr>
+        <a href="{{pathFor route='armenian-art'}}" class="btn btn-primary">{{_ "Armenian Art"}}</a>
+        <a href="{{pathFor route='armenian-literature'}}" class="btn btn-primary">{{_ "Armenian Literature"}}</a>
+        <a href="#" class="btn btn-primary">{{_ "Armenian Music"}}</a>
+        <a href="#" class="btn btn-primary">{{_ "Armenian Theatre"}}</a>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+   
+</template>

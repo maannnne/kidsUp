@@ -1,0 +1,100 @@
+<template name="VahanTerianLib">
+<div class='container'>
+    {{#if currentUser}}
+        <script>
+            document.title = 'Vahan Terian Library';
+        </script>
+        <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Library"}}</a>
+        <a href="{{pathFor route='vahan-terian'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Terian"}}</a>
+        <hr>
+        <h3>{{_ "Vahan Terian"}}</h3>
+        <div style="display: inline;">
+            <pre>  
+            <strong>THE LAST POET</strong>
+
+            Am I the last singer, then,
+            my country's last poet?
+            Is this death or sleep
+            enveloping you, bright Nayiri?
+            
+            Wherever I walk on this earth
+            I dream of your luminescent
+            countryside, and your language
+            that rings like prayer.
+            
+            Rings always, deep and clear.
+            Burns and pierces.
+            Are those blazing roses
+            burning? Or my fiery wounds?
+            
+            Anxious. Alone. I call you.
+            Shine on, my dream Nayiri.
+            Am I your last singer then,
+            my country's last poet?
+            </pre>
+
+            <pre>
+            <strong>ՄԻ՞ԹԵ ՎԵՐՋԻՆ ՊՈԵՏՆ ԵՄ ԵՍ</strong>
+
+            Մի՞թե վերջին պոետն եմ ես,
+            Վերջին երգիչն իմ երկրի,
+            Մա՞հն է արդյոք, թե նի՞նջը քեզ
+            Պատել, պայծառ Նաիրի։
+                
+            Վտարանդի, երկրում աղոտ,
+            Լուսեղ, քեզ եմ երազում,
+            Եվ հնչում է, որպես աղոթք
+            Արքայական քո լեզուն։
+                
+            Հնչում է միշտ խոր ու պայծառ,
+            Եվ խոցում է, և այրում,
+            Արդյոք բոցե վարդե՞րդ են վառ,
+            Թե՞ վերքերն իմ հրահրուն։
+                
+            Ահով ահա կանչում եմ քեզ
+            Ցոլա, ցնորք Նաիրի՛, —
+            Մի՞թե վերջին պոետն եմ ես,
+            Վերջին երգիչն իմ երկրի...
+            </pre>
+
+            <pre>
+            <strong>I LOVE YOUR DARK AND WICKED EYES</strong>
+            
+            I love your dark and wicked eyes, as deep
+            as the mysterious evening is deep, and dark
+            as the spell that dusk casts. I love the vast
+            seascape of your eyes where sin
+            hesitates like twilight before flickering past
+            where luck and chance have been.
+            I love your eyes, their drunken golden haze,
+            eyes that magnetize the lost like wordless beams
+            and torture the soul with their pitiless
+            caress. I love their dark and mysterious depths.
+            </pre>
+
+            <pre>
+            <strong>Ես սիրում եմ քո մեղավոր աչքերը խոր</strong>
+
+            Ես սիրում եմ քո մեղավոր աչքերը խոր,
+            Գիշերի պես խորհրդավոր.
+            Քո մեղավոր, խորհրդավոր աչքերը մութ,
+            Որպես թովիչ իրիկնամուտ։
+            Քո աչքերի անծայր ծովում մեղքն է դողում,
+            Որպես գարնան մթնշաղում։
+            Քո աչքերում կա մի քնքուշ բախտի վերհուշ,
+            Արբեցումի ոսկե մշուշ։
+            Մոլորվածին անխոս կանչող փարոսի շող,
+            Քո աչքերը հոգի տանջող։
+            Ես սիրում եմ գգվող-անգութ աչքերըդ մութ,
+            Որպես գարնան իրիկնամուտ    
+            </pre>
+        </div>
+        
+    {{else}}
+        <script>
+            document.title = 'ուբյու';
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</div>
+</template>

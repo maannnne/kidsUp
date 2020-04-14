@@ -1,0 +1,23 @@
+<template name="ArmenianArt">
+    {{#if currentUser}}
+        <script>
+                document.title="Armenian Art";
+        </script>
+        <h3>{{_ "Armenian Art"}}</h3>
+        <hr>
+        <a class="btn btn-primary" href='{{pathFor route="martiros-saryan"}}'>{{_ "Martiros Saryan"}}</a>
+        <a class="btn btn-primary">{{_ "Minas Avetisyan"}}</a>
+        <a class="btn btn-primary">{{_ "Ivan Aivazovsky"}}</a>
+        <a class="btn btn-primary">{{_ "Vardges Sureniants"}}</a>
+        <a class="btn btn-primary">{{_ "Valentin Podpomogov"}}</a>
+        <hr>
+        <a href="{{pathFor route='learn'}}" class="btn btn-primary"  style='float: right;' >{{_ "Back"}}</a>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>
+
+

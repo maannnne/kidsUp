@@ -1,0 +1,21 @@
+<template name="ArmenianLiterature">
+    {{#if currentUser}}
+        <script>
+                document.title="Armenian Literature";
+        </script>
+        <h3>{{_ "Armenian Literature"}}</h3>
+        <hr>
+        <a class="btn btn-primary" href='{{pathFor route="vahan-terian"}}'>{{_ "Vahan Terian"}}</a>
+        <a class="btn btn-primary">{{_ "Hovhannes Tumanyan"}}</a>
+        <a class="btn btn-primary">{{_ "Raffi"}}</a>
+        <a class="btn btn-primary">{{_ "Gurgen Mahari"}}</a>
+        <a class="btn btn-primary">{{_ "Hamo Sahyan"}}</a>
+        <hr>
+        <a href="{{pathFor route='learn'}}" class="btn btn-primary" style='float: right;' >{{_ "Back"}}</a>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>

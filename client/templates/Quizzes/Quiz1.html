@@ -1,0 +1,453 @@
+<template name='Quiz1Container'> 
+    {{#if currentUser}}
+        <script>
+            document.title="Arm Literature Quiz";
+        </script>
+        {{#if isScore}}
+        {{> ScoreDetails}}
+        {{else}}
+        {{> Quiz1}}
+        {{/if}} 
+        
+        {{#if showQuizAgain}}
+        {{> Quiz1}}
+        {{/if}}
+    {{else}}
+        <script>
+            document.title = 'ուբյու';
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>
+
+
+<template name="ScoreDetails">
+    {{#if currentUser}}
+    <div class='quiz-item'>
+        <img src='/images/vector4.png'/>
+        <span>{{_ "Your score is"}} {{getScore}}/5</span>
+    </div>
+    <div class='quiz-submit'>
+        <button  style='float: right;' class="retakeQuiz1 btn btn-primary">{{_ "Retake Quiz!"}}</button>
+    </div>
+    {{else}}
+    <h3>ՆՕ ՅՈՒԶԵՌ</h3>
+    {{/if}}
+</template>
+
+
+<template name="Quiz1">
+    <div>
+        {{#if getCurrentLanguage}}
+        <form>
+            <!-- 1 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion1}}   
+            <h3>{{question}}</h3>     
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio1}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt1" value="{{value}}">
+                <label class="form-check-label" for="q1opt1">          
+                    {{text}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio2}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt2" value="{{value}}">
+                <label class="form-check-label" for="q1opt2">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio4}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt3" value="{{value}}">
+                <label class="form-check-label" for="q1opt3">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 1 -->
+
+
+
+
+            <!-- 2 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion2}}
+            <h3>{{question}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio3}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt1" value="{{value}}">
+                <label class="form-check-label" for="q2opt1">          
+                    {{text}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio1}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt2" value="{{value}}">
+                <label class="form-check-label" for="q2opt2">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt3" value="{{value}}">
+                <label class="form-check-label" for="q2opt3">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 2 -->
+
+
+
+            <!-- 3 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion3}}
+            <h3>{{question}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio3}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt1" value="{{value}}">
+                <label class="form-check-label" for="q3opt1">          
+                    {{text}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio8}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt2" value="{{value}}">
+                <label class="form-check-label" for="q3opt2">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio7}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt3" value="{{value}}">
+                <label class="form-check-label" for="q3opt3">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 3 -->
+
+
+
+
+
+            <!-- 4 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion4}}
+            <h3>{{question}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt1" value="{{value}}">
+                <label class="form-check-label" for="q4opt1">          
+                    {{text}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio2}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt2" value="{{value}}">
+                <label class="form-check-label" for="q4opt2">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio5}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt3" value="{{value}}">
+                <label class="form-check-label" for="q4opt3">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 4 -->
+
+
+
+
+            <!-- 5 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion5}}
+            <h3>{{question}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio8}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt1" value="{{value}}">
+                <label class="form-check-label" for="q5opt1">          
+                    {{text}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio4}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt2" value="{{value}}">
+                <label class="form-check-label" for="q5opt2">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt3" value="{{value}}">
+                <label class="form-check-label" for="q5opt3">
+                    {{text}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 5 -->
+
+        <div class='quiz-submit'>
+            <input type='Submit' class="btn btn-primary" style='float: right;' value="{{_ 'Check the answers!'}}">
+        </div>
+        </form>
+
+
+
+        {{else}}
+
+
+        <form>
+            <!-- 1 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion1}}   
+            <h3>{{questionhy}}</h3>     
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio1}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt1" value="{{value}}">
+                <label class="form-check-label" for="q1opt1">          
+                    {{texthy}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio2}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt2" value="{{value}}">
+                <label class="form-check-label" for="q1opt2">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio4}}
+                <input class="form-check-input" type="radio" name="q1q1" id="q1opt3" value="{{value}}">
+                <label class="form-check-label" for="q1opt3">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 1 -->
+
+
+
+
+            <!-- 2 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion2}}
+            <h3>{{questionhy}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio3}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt1" value="{{value}}">
+                <label class="form-check-label" for="q2opt1">          
+                    {{texthy}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio1}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt2" value="{{value}}">
+                <label class="form-check-label" for="q2opt2">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q2" id="q2opt3" value="{{value}}">
+                <label class="form-check-label" for="q2opt3">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 2 -->
+
+
+
+            <!-- 3 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion3}}
+            <h3>{{questionhy}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio3}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt1" value="{{value}}">
+                <label class="form-check-label" for="q3opt1">          
+                    {{texthy}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio8}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt2" value="{{value}}">
+                <label class="form-check-label" for="q3opt2">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio7}}
+                <input class="form-check-input" type="radio" name="q1q3" id="q3opt3" value="{{value}}">
+                <label class="form-check-label" for="q3opt3">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 3 -->
+
+
+
+
+
+            <!-- 4 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion4}}
+            <h3>{{questionhy}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt1" value="{{value}}">
+                <label class="form-check-label" for="q4opt1">          
+                    {{texthy}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio2}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt2" value="{{value}}">
+                <label class="form-check-label" for="q4opt2">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio5}}
+                <input class="form-check-input" type="radio" name="q1q4" id="q4opt3" value="{{value}}">
+                <label class="form-check-label" for="q4opt3">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 4 -->
+
+
+
+
+            <!-- 5 -->
+        <div class='quiz-item'> 
+            <div>
+            {{#each getQuestion5}}
+            <h3>{{questionhy}}</h3>   
+            {{/each}}    
+            </div>
+            <div class="form-check">
+                {{#each getRadio8}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt1" value="{{value}}">
+                <label class="form-check-label" for="q5opt1">          
+                    {{texthy}}    
+                </label>
+                {{/each}}     
+            </div>
+
+            <div class="form-check">
+                {{#each getRadio4}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt2" value="{{value}}">
+                <label class="form-check-label" for="q5opt2">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+            <div class="form-check">
+                {{#each getRadio6}}
+                <input class="form-check-input" type="radio" name="q1q5" id="q5opt3" value="{{value}}">
+                <label class="form-check-label" for="q5opt3">
+                    {{texthy}}
+                </label>
+                {{/each}}
+            </div>
+        </div>
+            <!-- 5 -->
+
+
+        <div class='quiz-submit'> 
+            <input type='Submit' class="btn btn-primary" style='float: right;' value="{{_ 'Check the answers!'}}">
+        </div>
+        </form>
+        {{/if}}
+    </div>
+
+</template>
+
+
+
+
+<!-- 
+<template name="Quiz1">
+    
+    {{#if TemplateVar.get "showQ1"}}
+    {{> Q1Q1}}
+    {{else}}
+    {{> start1}}
+    {{/if}}
+    {{> Q1Q1}}
+</template> 
+-->
+
+

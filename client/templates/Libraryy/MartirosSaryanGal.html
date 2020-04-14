@@ -1,0 +1,74 @@
+<template name="MartirosSaryanGal">
+    {{#if currentUser}}
+        <script>
+            document.title = 'Martiros Saryan Gallery'
+        </script>
+        <div class="container">
+            <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Gallery"}}</a>
+            <a href="{{pathFor route='martiros-saryan'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Saryan"}}</a>
+            <hr>
+            <div class="gallery row">
+                <div class="col">
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-3.jpg" class='gallery-item' width='70%' >
+                        <h1>Flowers, 1940</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-6.jpg" class='gallery-item' width='70%%'>
+                        <h1>Untitled</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-1.jpg" class='gallery-item' width='70%%'>
+                        <h1>Design for opera by A. Spendiarov 'Almast', 1939</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-4.jpg" class='gallery-item' width='70%'>
+                        <h1>Egyptian Masks, 1911</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-5.jpg" class='gallery-item' width='70%'>
+                        <h1>October in Yerevan, 1961</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-2.jpg" class='gallery-item' width='70%'>
+                        <h1>Armenia</h1>       
+                    </div>
+                
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-10.jpg" class='gallery-item' width='70%'>
+                        <h1>Armenian Village, 1933</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class='image-container'>
+                        <img src="/images/gallery-pics/saryan-8.jpg" class='gallery-item' width='70%'>
+                        <h1>Mountains, 1923</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <script>
+            document.title = 'Martiros Saryan Gallery';
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>

@@ -1,0 +1,48 @@
+<template name="TakeNotes">
+    {{#if currentUser}}
+        <script>
+            document.title="Take Notes";
+        </script>
+        <h3>{{_ "Take Notes"}}</h3>
+        <hr>
+        {{ > AddNote }}
+
+        <div style='word-wrap: break-word;'>
+            {{#if getNotes}}
+                {{#each getNotes}}
+                    {{> Note }}
+                {{/each}}
+            {{else}}
+            <hr>
+            <div class="feed-group">
+                <p class='feed-group-item' style='text-align: center; font-size: 15px;'>{{_ "No Notes Yet"}}</p>
+                <p class='feed-group-item' style='text-align: center; font-size: 15px;'>{{_ "Add some using the input above"}}</p>
+            </div>
+            {{/if}}
+        </div>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>
+
+
+<template name="Note">  
+<hr>
+    <div class='feed-group-item'>
+        <!-- <input type='checkbox' {{checked}}/> -->
+        <span name="singleNote" class="{{checked}}" style="font-size: 15px; color:rgba(255, 255, 255, 0.966)">{{name}}</span>
+        <button class="btn btn-primary" type="button" name="deleteButton">{{_ "Delete"}}</button>
+    </div>     
+</template>
+
+
+<template name="AddNote">
+        <form class="form-group noteItem feed-group-item">
+            <input type="text" value={{name}} class="form-control single-note" placeholder= "{{_ 'Type and press enter'}}..."  name='addNoteButton' required="true">
+            <!-- <input style="margin-top: 12px;"  type="submit" value="{{_ 'Add'}}" class="btn btn-primary"> -->
+        </form>
+</template>
+

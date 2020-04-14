@@ -1,0 +1,35 @@
+<template name="Media">
+    {{#if currentUser}}
+        <script>
+            document.title="Media";
+        </script>
+        <div>
+            <h3>{{_ "Library"}}</h3>
+            <hr>    
+            <a href="{{pathFor route='vahan-terian-lib'}}" class="btn btn-primary">{{_ "Vahan Terian"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Yeghishe Charents"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Hamo Sahyan"}}</a>
+        </div>
+        <div>
+            <h3>{{_ "Music"}}</h3>
+            <hr>    
+            <a href="{{pathFor route='arno-babadjanian-music'}}" class="btn btn-primary">{{_ "Arno Babajanyan"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Someone"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Someone"}}</a>
+        </div>
+        <div>
+            <h3>{{_ "Gallery"}}</h3>
+            <hr>    
+            <a href="{{pathFor route='martiros-saryan-gal'}}" class="btn btn-primary">{{_ "Martiros Saryan"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Minas Avetisyan"}}</a>
+            <a href="" class="btn btn-primary">{{_ "Valentin Podpomogov"}}</a>
+        </div>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+        
+</template>
+

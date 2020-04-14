@@ -1,0 +1,19 @@
+<template name="Quizzes">
+    {{#if currentUser}}
+        <script>
+            document.title="Quizzes";
+        </script>
+
+        <h3>{{_ "Quizzes"}}</h3>
+        <hr>
+        <a href="{{pathFor route='quiz2'}}" class="btn btn-primary">{{_ "Armenian Art"}}</a>
+        <a href="{{pathFor route='quiz1'}}" class="btn btn-primary">{{_ "Armenian Literature"}}</a>
+        <a href="" class="btn btn-primary">{{_ "Armenian Music"}}</a>
+        <a href="" class="btn btn-primary">{{_ "Armenian Theatre"}}</a>
+    {{else}}
+        <script>
+            document.title = 'ուբյու';
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>

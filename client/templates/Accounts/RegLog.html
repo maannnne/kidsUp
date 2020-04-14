@@ -1,0 +1,69 @@
+<template name="mainDisplay">
+    {{> Register }}
+</template>
+
+<template name='register'>
+    <form class='register reglog'>
+        <h3>{{_ "Create your brand new profile in KidsUp!"}}</h3>
+        <div class="form-row">
+            <div class='col'>
+                <label for="exampleInputEmail1">{{_ "Email"}}</label>
+                <input  name='newUserEmail' placeholder="{{_ 'Type email'}}..." type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <div class='col'>
+                <label for="exampleInputName1">{{_ "Name"}}</label>
+                <input  name='newUserName' placeholder="{{_ 'Type your name'}}..." type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">{{_ "Password"}}</label>
+            <input name='newUserPassword' placeholder="{{_ 'Type password'}}..." type="password" class="form-control" id="exampleInputPassword1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">{{_ "Confirm Password"}}</label>
+            <input name='confirmPassword' placeholder="{{_ 'Confirm Password'}}..." type='password' class="form-control" id="exampleInputPassword1" required>
+         </div>
+        <button type="submit" class="btn btn-primary" value='{{_ "Register"}}'>{{_ "Register"}}</button>
+        <hr>
+        <p>{{_ "Already have an account?"}} <a class='already' href='{{pathFor route="login"}}'>{{_ "Log In"}}!</a></p>
+        <div class="btn-group">
+            <button class="btn btn-primary btn-sm dropdown-toggle float-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{_ "Change the Language"}}
+            </button>
+            <div style="text-align: center;" class="dropdown-menu">
+                <a class="dropdown-item arm-lang" style="color:#35215d !important" href="#">{{_ "Armenian" }}</a>
+                <a class="dropdown-item eng-lang" style="color:#35215d !important" href="#">{{_ "English" }}</a>
+            </div>
+        </div>
+    </form>
+     
+</template>
+
+
+<template name='login'>
+    
+    <form class='login reglog'>
+            <h3>KidsUp! {{_ "Log In"}}</h3>
+            <div class="form-group">
+                <label for="exampleInputEmail1">{{_ "Email"}}</label>
+                <input  name='userEmail' placeholder="{{_ 'Type email'}}..." type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">{{_ "Password"}}</label>
+                <input name='userPassword' placeholder="{{_ 'Type password'}}..." type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+        <button type="submit" class="btn btn-primary" value="{{_ 'Log In'}}">{{_ "Log In"}}</button>
+        <hr>
+        <p>{{_ "Don't have an account yet?"}} <a class='already' href='{{pathFor route="register"}}'>{{_ "Register"}}!</a></p>   
+        <div class="btn-group">
+            <button class="btn btn-primary btn-sm dropdown-toggle float-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{_ "Change the Language"}}
+            </button>
+            <div style="text-align: center;" class="dropdown-menu">
+                <a class="dropdown-item arm-lang" style="color:#35215d !important" href="#">Armenian</a>
+                <a class="dropdown-item eng-lang" style="color:#35215d !important" href="#">English</a>
+            </div>
+        </div>
+    </form>
+  
+</template>
