@@ -142,7 +142,7 @@ Router.route('/login', {
 // ArmLitRadios.insert({textID: 7, value: 'hovhannesshiraz',   texthy: "Հովհաննես Շիրազ", text: 'Hovhannes Shiraz'});
 // ArmLitRadios.insert({textID: 8, value: 'silvakaputikyan',   texthy: "Սիլվա Կապուտիկյան", text: 'Silva Kaputikyan'});
 
-//Notes.insert({name: 'Note1', createdAt: new Date(year, month[, day]), completed: false});
+
 
 // ArmLitQuiz.insert({questionhy: "Ո՞վ է գրել <<Մթնաձորը>>։", question: "Who is the writer of 'Mtnadzor'?", questionID: 1, correctAnswer: "axelbakunts"});
 // ArmLitQuiz.insert({questionhy: "Ո՞վ է գրել <<Մթնշաղի անուրջները>>։", question: "Who is the writer of 'Dreams of the Dawn'?", questionID: 2, correctAnswer: "vahanterian"});
@@ -151,7 +151,6 @@ Router.route('/login', {
 // ArmLitQuiz.insert({questionhy: "Ո՞վ է գրել <<Անմահները հրամայում են>>։", question: "Who is the writer of 'Immortals Command'?", questionID: 5, correctAnswer: "paruyrsevak"});
 
 
-//VAHAN TERIAN
 // LearnTerian.insert({
 //   parID: 1,
 //   parEng: 'Vahan Terian was an Armenian poet, lyrist and public activist. He is known for his sorrowful, romantic poems, the most famous of which are still read and sung in their musical versions.',
@@ -183,7 +182,6 @@ Router.route('/login', {
 //   periodHy: "1903–1911",
 // });
 
-//MARTOROSSARYAN
 
 
    
