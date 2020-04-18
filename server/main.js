@@ -59,6 +59,9 @@ Meteor.methods({
     today = mm + '-' + dd + '-' + yyyy;
     Q2Results.insert({userID: currentUser, score: points, date: today, sortingDate: new Date()});
     //return Q1Results.find({userID: currentUser}, {sort: {date: -1}}).fetch()[0];
+  },
+  'removeUser': function(userID) {
+    Meteor.remove({_id: userID});
   }
 });
 

@@ -14,24 +14,28 @@ Template.register.events({
         var name = e.target.newUserName.value;
         var pass = e.target.newUserPassword.value;
         var confPass = e.target.confirmPassword.value;
-        if(pass === confPass){
+        if((name.trim().length === 0) || (pass.trim().length === 0)){
+            alert('Please input valid data')
+        }
+        else {
+        if((pass === confPass)){
             Accounts.createUser({
                 email: email,
                 password: pass,
                 username: name
             }, function(error){
                 if(error){
-                    console.log(error.reason);
+                    alert(error.reason);
                 } else {
                     Router.go('/');
                 }
             });
             //Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.name": name}});
-            Router.go('/');
         }
         else {
             alert('Please type matching passwords');
         }
+    }
     }
 });
 
@@ -42,11 +46,10 @@ Template.login.events({
         var userPassword = e.target.userPassword.value;
         Meteor.loginWithPassword(userEmail, userPassword, function(error){
             if(error){
-                console.log(error.reason);
+                alert(error.reason);
             } else {
                 Router.go('/');
             }
-
         });
     }
 });

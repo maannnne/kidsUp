@@ -1,8 +1,5 @@
 <template name="Home">
     {{#if currentUser}}
-        <script>
-            document.title="Feed";
-        </script>
     
         {{ > Feed}}
     {{else}}
@@ -32,12 +29,12 @@
 
 
 <template name="Feed">
-    {{#if currentUser}}
+    {{#if currentUser}}    
+    {{#if noFeedItems}}
     <script>
         document.title="Home";
     </script>
-    
-    {{#if noFeedItems}}
+
         <h2>{{_ "Welcome to"}} KidsUp! {{#each getUserEmail}} {{username}} {{/each}}</h2>
         <div class="feed-group">
             <p class='feed-group-item'><i>{{_ "Feed"}}</i> - {{_ "see your latest achievements"}}</p>
@@ -47,6 +44,10 @@
             <p class='feed-group-item'><i>{{_ "Take Notes"}}</i> - {{_ "write down anything important to remember to learn or play"}}</p>
         </div>    
     {{else}}
+    <script>
+        document.title="Feed";
+    </script>
+
     <h3>{{_ "Your latest achievement!"}}</h3>
         {{#if getQuiz1FeedItems}}
             <hr>

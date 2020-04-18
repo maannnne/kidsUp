@@ -7,7 +7,7 @@
         document.title = "Register";
     </script>
     <form class='register reglog'>
-        <h3>{{_ "Create your brand new profile in KidsUp!"}}</h3>
+        <h3 name='regPageHeader'>{{_ "Create your brand new profile in KidsUp!"}}</h3>
         <div class="form-row">
             <div class='col'>
                 <label for="exampleInputEmail1">{{_ "Email"}}</label>
@@ -26,11 +26,11 @@
             <label for="exampleInputPassword1">{{_ "Confirm Password"}}</label>
             <input name='confirmPassword' placeholder="{{_ 'Confirm Password'}}..." type='password' class="form-control" id="exampleInputPassword1" required>
          </div>
-        <button type="submit" class="btn btn-primary" value='{{_ "Register"}}'>{{_ "Register"}}</button>
+        <button name="registerButton" type="submit" class="btn btn-primary" value='{{_ "Register"}}'>{{_ "Register"}}</button>
         <hr>
-        <p>{{_ "Already have an account?"}} <a class='already' href='{{pathFor route="login"}}'>{{_ "Log In"}}!</a></p>
+        <p name="haveAccMessage">{{_ "Already have an account?"}} <a name="loginLink" class='already' href='{{pathFor route="login"}}'>{{_ "Log In"}}!</a></p>
         <div class="btn-group">
-            <button class="btn btn-primary btn-sm dropdown-toggle float-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button name="regLangButton" class="btn btn-primary btn-sm dropdown-toggle float-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{_ "Change the Language"}}
             </button>
             <div style="text-align: center;" class="dropdown-menu">
