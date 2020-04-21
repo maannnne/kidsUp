@@ -1,0 +1,20 @@
+<template name="ArmenianMusic">
+    {{#if currentUser}}
+        <script>
+                document.title="Armenian Music";
+        </script>
+        <h3>{{_ "Armenian Music"}}</h3>
+        <hr>
+        <a class="btn btn-primary" href='{{pathFor route="arno-babajanyan"}}'>{{_ "Arno Babajanyan"}}</a>
+        <a class="btn btn-primary" href='{{pathFor route="aram-khachatryan"}}'>{{_ "Aram Khachatryan"}}</a>
+        <hr>
+        <a href="{{pathFor route='learn'}}" class="btn btn-primary"  style='float: right;' >{{_ "Back"}}</a>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
+</template>
+
+

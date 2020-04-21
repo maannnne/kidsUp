@@ -24,8 +24,15 @@
 <template name="ScoreDetails">
     {{#if currentUser}}
     <div class='quiz-item'>
-        <img src='/images/vector4.png'/>
-        <span>{{_ "Your score is"}} {{getScore}}/5</span>
+        {{#if checkIfScoreIs5}}
+        <div style="text-align: center">
+            <img src='/images/random-kid.png' height="300px"/>
+            <h3>{{_ "Congratulations!"}} {{_ "You scored"}} {{getScore}}/5 {{_ "points! Good job!"}}</h3>
+        </div>
+        {{else}}
+            <img src='/images/vector4.png' height="260px"/>
+            <span>{{_ "Your score is"}} {{getScore}}/5</span>
+        {{/if}}
     </div>
     <div class='quiz-submit'>
         <button  style='float: right;' class="retakeQuiz1 btn btn-primary">{{_ "Retake Quiz!"}}</button>

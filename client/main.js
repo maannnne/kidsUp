@@ -4,21 +4,31 @@ import { Mongo } from 'meteor/mongo';
 import './main.html';
 import './templates/Learn/Learn';
 import './templates/Learn/ArmenianLiterature/VahanTerian';
+import './templates/Learn/ArmenianLiterature/HovhannesTumanyan';
+import './templates/Learn/ArmenianArt/ArmenianArt';
+import './templates/Learn/ArmenianLiterature/ArmenianLiterature';
+import './templates/Learn/ArmenianMusic/ArmenianMusic';
+import './templates/Learn/ArmenianMusic/ArnoBabajanyan';
+import './templates/Learn/ArmenianMusic/AramKhachatryan';
+
 import './templates/Quizzes/Quizzes';
 import './templates/Quizzes/Quiz1';
 import './templates/Quizzes/Quiz2';
+
 import './templates/Libraryy/Library';
+import './templates/Libraryy/VahanTerianLib';
+import './templates/Libraryy/HovhannesTumanyanLib';
+import './templates/Libraryy/MartirosSaryanGal';
+import './templates/Libraryy/ArnoBabajanyanMusic';
+
 import './templates/TakeNotes/TakeNotes';
 import './templates/Home';
 import './templates/Main';
 import './templates/Navigation';
-import './templates/Learn/ArmenianArt/ArmenianArt';
-import './templates/Learn/ArmenianLiterature/ArmenianLiterature';
+
 import './templates/Accounts/RegLog';
-import './HomeJS/Home';
-import './templates/Libraryy/VahanTerianLib';
-import './templates/Libraryy/MartirosSaryanGal';
-import './templates/Libraryy/ArnoBabajanyanMusic';
+
+
 
   
 //JS IMPORTS
@@ -29,20 +39,23 @@ import './RegisterJS/RegLog';
 import './NavigationJS/Navigation';
 import './HomeJS/Home';
 import './LearnJS/VahanTerian';
+import './LearnJS/HovhannesTumanyan';
 import './LearnJS/MartirosSaryan';
 import '../i18n/i18n';
 
 //COLLECTIONS
-Notes = new Mongo.Collection('notes');
+LearnTerian = new Mongo.Collection('learnterian');
+LearnTumanyan = new Mongo.Collection('learntumanyan');
+LearnSaryan = new Mongo.Collection('learnsaryan');
+LearnBabajanyan = new Mongo.Collection('learnbabajanyan');
+LearnKhachatryan = new Mongo.Collection('learnkhachatryan');
+ArmArtQuiz = new Mongo.Collection('armartquiz');
+ArmArtRadios = new Mongo.Collection('armartradios');
 ArmLitQuiz = new Mongo.Collection('armlitquiz');
 ArmLitRadios = new Mongo.Collection('armlitradios');
 Q1Results = new Mongo.Collection('q1results');
-LearnTerian = new Mongo.Collection('learnterian');
-LearnSaryan = new Mongo.Collection('learnsaryan');
-ArmArtQuiz = new Mongo.Collection('armartquiz');
-ArmArtRadios = new Mongo.Collection('armartradios');
 Q2Results = new Mongo.Collection('q2results'); 
-QResults = new Mongo.Collection('qresults'); 
+Notes = new Mongo.Collection('notes');
 
 //MAIN ROUTES
 Router.route('/', {
@@ -62,14 +75,26 @@ Router.route('/Learn',  {
 Router.route('/ArmenianArt', {
   name: 'armenian-art'
 });
+Router.route('/ArmenianMusic', {
+  name: 'armenian-music'
+});
 Router.route('/ArmenianLiterature', {
   name: 'armenian-literature'
 });
 Router.route('/ArmenianLiterature/VahanTerian', {
   name: 'vahan-terian'
 });
+Router.route('/ArmenianLiterature/HovhannesTumanyan', {
+  name: 'hovhannes-tumanyan'
+});
 Router.route('/ArmenianArt/MartirosSaryan', {
   name: 'martiros-saryan'
+});
+Router.route('/ArmenianMusic/ArnoBabajanyan', {
+  name: 'arno-babajanyan'
+});
+Router.route('/ArmenianMusic/AramKhachatryan', {
+  name: 'aram-khachatryan'
 });
 
 
@@ -101,6 +126,9 @@ Router.route('/Media', {
 
 Router.route('/Library/VahanTerianLib', {
   name: 'vahan-terian-lib'
+});
+Router.route('/Library/HovhannesTumanyanLib', {
+  name: 'hovhannes-tumanyan-lib'
 });
 
 
@@ -216,6 +244,46 @@ Router.route('/login', {
 //   parEng: 'After the Bolshevik seizure of power in 1917 he went with his family to live in Russia. In 1921 they moved to Armenia. While most of his work reflected the Armenian landscape, he also designed the coat of arms for Armenian SSR and designed the curtain for the first Armenian state theatre. From 1926–1928 he lived and worked in Paris, but most works from this period were destroyed in a fire on board the boat on which he returned to the Soviet Union. From 1928 until his death, Saryan lived in Soviet Armenia. In the difficult years of the 1930s, he mainly devoted himself again to landscape painting, as well as portraits. He also was chosen as a deputy to the USSR Supreme Soviet and was awarded the Order of Lenin three times and other awards and medals. He was a member of the USSR Art Academy (1974) and Armenian Academy of Sciences (1956). Saryan died in Yerevan on 5 May 1972. His former home in Yerevan is now a museum dedicated to his work with hundreds of items on display. He was buried in Yerevan at the Pantheon next to Komitas Vardapet. His son Ghazaros (Lazarus) Saryan was a composer and educator. His great-granddaughter Mariam Petrosyan is also a painter, as well as cartoonist and award-winning novelist.',
 //   parHy: '1915 թվականին, Մեծ Եղեռնի օրերին Սարյանը աշխատել է «Հայերին օգնող մոսկովյան կոմիտեում»։ Մեկնել է Էջմիածին՝ թուրքական սրից հալածական հայ գաղթականներին տեղում օգնություն ցույց տալու համար։ Հովհաննես Թումանյանի, Գ. Հովսեփյանի և հայ այլ մտավորականների հետ, մոլեգնող համաճարակի պայմաններում, բոլոր ջանքերը գործադրել է Արևելյան Հայաստանում ապաստանած արևմտահայերի վերջին մնացորդներին մահվան ճիրաններից փրկելու համար։ Անքուն գիշերների հետևանքով և տեսածի ծանր տպավորության տակ հոգեկան ցնցում է ստացել։ Հովհաննես Թումանյանի հանձնարարությամբ Սարյանին տեղափոխել են Թիֆլիս՝ հիվանդանոց։ 1916 թվականին, Վարդգես Սուրենյանցի, Փանոս Թերլեմեզյանի, Եղիշե Թադևոսյանի և այլոց հետ մասնակցել է Հայ արվեստագետների միության ստեղծմանը, Վարդգես Սուրենյանցի հետ ձևավորել Վալերի Բրյուսովի «Հայ պոեզիան հնագույն ժամանակներից մինչև մեր օրերը» անթոլոգիան, 1919 թվականին Նոր Նախիջևանում հիմնել է գավառագիտական թանգարան։ Հայաստանում սովետական կարգերի հաստատումից հետո Սարյանը 1921 թվականին ընտանիքով տեղափոխվել և մշտական բնակություն է հաստատել Երևանում, որտեղ էլ 1972 թվականի մայիսի 5-ին վախճանվել է։ Թաղված է Երևանի Կոմիտասի անվան պանթեոնում։ 1967 թվականին Երևանում բացվել է Սարյանի տուն-թանգարանը, ուր գտնվում է նրա ստեղծագործական ժառանգության մի զգալի մասը։ Սարյանի գործերը կենտրոնացված են Հայաստանի պետական պատկերասրահում և նրա մասնաճյուղերում, ինչպես և Տրետյակովյան պատկերասրահում, ԱՊՀ երկրների տարբեր թանգարաններում, ԱՄՆ-ի, Ֆրանսիայի և այլ երկրների մասնավոր հավաքածուներում։'
 // });
+
+
+// LearnTumanyan.insert({
+//   parID: 0,
+//   fullNameEng: "Hovhannes Tumanyan",
+//   bornEng: "19 February, 1869",
+//   diedEng: "23 March, 1923 (aged 54)",
+//   nationalityEng: "Armenian",
+//   periodEng: "1881–1923",
+//   fullNameHy: "Հովհաննես Թումանյան",
+//   bornHy: "Փետրվարի 19, 1869",
+//   diedHy: "Մարտի 23, 1923 (54 տարեկանում)",
+//   nationalityHy: "Հայ",
+//   periodHy: "1881–1923"
+// });
+
+// LearnTumanyan.insert({
+//   parID: 1,
+//   parEng: 'Hovhannes Tumanyan was an Armenian poet, writer, translator, and literary and public activist. He is the national poet of Armenia. Tumanyan wrote poems, quatrains, ballads, novels, fables, and critical and journalistic articles. His work was mostly written in realistic form, often centering on everyday life of his time. Born in the historical village of Dsegh in the Lori region, at a young age Tumanyan moved to Tiflis, which was the center of Armenian culture under the Russian Empire during the 19th and early 20th centuries. He soon became known to the wide Armenian society for his simple but very poetic works.',
+//   parHy: 'Հովհաննես Թադևոսի Թումանյան (փետրվարի 19, 1869, Դսեղ, Բորչալուի գավառ, Թիֆլիսի նահանգ, Ռուսական կայսրություն - մարտի 23, 1923, Մոսկվա, ԽՍՀՄ), հայ բանաստեղծ, արձակագիր, գրական, ազգային և հասարակական գործիչ։ Գրել է բանաստեղծություններ, պոեմներ, քառյակներ, բալլադներ, պատմվածքներ ու հեքիաթներ, ակնարկներ, քննադատական ու հրապարակախոսական հոդվածներ, կատարել է թարգմանություններ, մշակել է «Սասնա ծռեր» դյուցազնավեպի «Սասունցի Դավիթ» ճյուղը։ Համարվում է ամենայն հայոց մեծ բանաստեղծ:'
+// });
+// LearnTumanyan.insert({
+//   parID: 2,
+//   parEng: 'From 1877–1879, Tumanyan attended the parochial school of Dsegh. From 1879–1883 he went to a school in Jalaloghly. Tumanyan moved to Tiflis in 1883, where he attended the Nersisyan School from 1883–1887. Tumanyan has wrote his first poem at the age of 12, while studying in Jalaloghly school. He lived at the teachers house for a while and fell in love with the teachers daughter Vergine. Since 1893, Tumanyan worked for Aghbyur, Murtch, Hasker and Horizon periodicals and also was engaged in public activism.',
+//   parHy: 'Հովհաննես Թումանյանը ծնվել է 1869 թվականի փետրվարի 19-ին Լոռվա Դսեղ գյուղում: 1877-1879 թվականներին Թումանյանը սովորել է Դսեղի ծխական դպրոցում։ 1879-1883 սովորել է Ջալալօղլու (այժմ Ստեփանավան) նորաբաց երկսեռ դպրոցում: 1883 թվականից բնակվել է Թիֆլիսում: 1883-1887 թվականներին սովորել է Թիֆլիսի Ներսիսյան դպրոցում, սակայն նյութական ծանր դրության պատճառով 1887 թվականին կիսատ թողնելով ուսումը` աշխատել է Թիֆլիսի հայ եկեղեցական դատարանում, այնուհետև Հայ Հրատարակչական միության գրասենյակում (մինչև 1893 թ.)։ 1893 թվականից աշխատակցել է «Աղբյուր», «Մուրճ», «Հասկեր», «Հորիզոն» գրական պարբերականներին: 1899 թվականին նրա նախաձեռնությամբ Թիֆլիսում ստեղծվել է «Վերնատուն» գրական խմբակը, որի անդամներն էին Հովհաննես Թումանյանը, Դերենիկ Դեմիրճյանը, Լևոն Շանթը, Ղազարոս Աղայանը, Ավետիք Իսահակյանը, Նիկոլ Աղբալյանը և ուրիշներ։ Որոշ ընդմիջումներով խմբակը գործել է մինչև 1908 թ.:'
+// });
+// LearnTumanyan.insert({
+//   parID: 3,
+//   parEng: 'In 1899, Tumanyan came up with an idea of organizing meetings of Armenian intellectuals of the time at his house on 44 Bebutov Street in Tiflis. Soon it became an influential literary group, which often gathered in the garret of Tumanyans house. Vernatun means garret in Armenian, which was the name the group was referred to. Prominent members of the collective were Avetik Isahakyan, Derenik Demirchyan, Levon Shant, Ghazaros Aghayan, Perch Proshyan, Nikol Aghbalian, Alexander Shirvanzade, Nar-Dos, Vrtanes Papazyan, Vahan Terian, Leo, Stepan Lisitsyan, Mariam Tumanyan, Gevorg Bashinjagyan and many other significant Armenian figures of early 20th century. With some pauses, it existed until 1908.',
+//   parHy: '1912 թվականին Թումանյանն ընտրվել է նորաստեղծ Հայ գրողների կովկասյան ընկերության նախագահ, իսկ 1918 թվականին՝ Հայոց հայրենակցական միությունների միության (ՀՀՄՄ) նախագահ։ Առաջին համաշխարհային պատերազմում (1914-1918 թթ.) հայ ժողովրդի կրած վնասները հաշվելու և Փարիզի հաշտության խորհրդաժողովին (1919-1920 թթ.) ներկայացնելու նպատակով ՀՀՄՄ-ն 1918 թվականին ստեղծել է Քննիչ հանձնաժողով՝ Թումանյանի գլխավորությամբ։ 1912-1921 թվականներին եղել է Հայ գրողների կովկասյան միության նախագահ։ Հայաստանի խորհրդայնացումից հետո նախագահել է Հայաստանի օգնության կոմիտեն (1921-1922)։'
+// });  
+// LearnTumanyan.insert({
+//   parID: 4,
+//   parEng: 'In 1912 Tumanyan was elected the president of the Company of Caucasus Armenian Writers. In the fall of 1921, Tumanyan went to Constantinople to find support of Armenian refugees. After months spent there, he returned ill. After surgery in 1922, he started to get better. But in September, Tumanyans disease started to progress again. He was transferred to a hospital in Moscow, where he died on March 23, 1923.',
+//   parHy: '1921 թվականի աշնանը Թումանյանը մեկնել է Կոստանդնուպոլիս՝ հայ գաղթականների համար օգնություն գտնելու նպատակով։ Մի քանի ամիս մնալով այնտեղ` նա վերադառնում է հիվանդացած։ Մահացել է 1923 թվականին՝ Մոսկվայում։ Թումանյանի ստեղծագործությունների հիման վրա նկարահանվել են մի շարք ֆիլմեր, ինչպես նաև ստեղծվել են Անուշ (1912) և Ալմաստ (1930) օպերաները հիմնված են Թումանյանի ստեղծագործությունների վրա։ Թումանյանը մահացել է 1923 թվականի մարտի 23-ին երեկոյան 9-ին՝ 54 տարեկան հասակում, թաղվել է Խոջիվանքի գերեզմանոցում։'
+// });  
+
+
+
+
 
 
 

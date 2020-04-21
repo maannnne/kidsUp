@@ -7,16 +7,18 @@ Meteor.startup(() => {
   // code to run on server at startup
 });
 
-
-export const Notes = new Mongo.Collection('notes');
+export const LearnTerian = new Mongo.Collection('learnterian');
+export const LearnTumanyan = new Mongo.Collection('learntumanyan');
+export const LearnSaryan = new Mongo.Collection('learnsaryan');
+export const LearnBabajanyan = new Mongo.Collection('learnbabajanyan');
+export const LearnKhachatryan = new Mongo.Collection('learnkhachatryan');
 export const ArmLitQuiz = new Mongo.Collection('armlitquiz');
 export const ArmLitRadios = new Mongo.Collection('armlitradios');
-export const Q1Results = new Mongo.Collection('q1results');
-export const LearnTerian = new Mongo.Collection('learnterian');
-export const LearnSaryan = new Mongo.Collection('learnsaryan');
 export const ArmArtQuiz = new Mongo.Collection('armartquiz');
 export const ArmArtRadios = new Mongo.Collection('armartradios');
+export const Q1Results = new Mongo.Collection('q1results');
 export const Q2Results = new Mongo.Collection('q2results'); 
+export const Notes = new Mongo.Collection('notes');
 
 Meteor.methods({
   'insertQ1NewRes': function(points) {

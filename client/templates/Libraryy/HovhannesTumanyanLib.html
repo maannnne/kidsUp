@@ -1,0 +1,480 @@
+<template name='hovhannesTumanyanLib'>
+    <div class='container'>
+        {{#if currentUser}}
+            <script>
+                document.title = 'Hovhannes Tumanyan Library';
+            </script>
+            <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Library"}}</a>
+            <a href="{{pathFor route='hovhannes-tumanyan'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Tumanyan"}}</a>
+            <hr>
+            <h3>{{_ "Hovhannes Tumanyan"}}</h3>
+            <div style="display: inline;">
+                <pre>  
+                <strong>Քառյակներ</strong>
+                
+                Անց կացա՜ն…
+                Օրերս թըռան, ա՜նց կացա՜ն.
+                Ախ ու վախով, դարդերով
+                Սիրտըս կերա՜ն, ա՜նց կացա՜ն:
+                
+                * * *
+                Վերջացա՜վ…
+                Կյանքս մաշվեց, վերջացա՜վ.
+                Ինչ հույս արի` փուչ էլավ,
+                Ինչ խնդություն` վերջը ցա՜վ:
+                
+                1890
+                —————————————————-
+                
+                Հիմա բացե՜լ են հանդես
+                Երգիչները իմ անտես.
+                Ջա՜ն, հայրենի ծղրիդներ,
+                Ո՞վ է լսում հիմի ձեզ:
+                
+                * * *
+                
+                Ե՛տ չեկա՜վ…
+                Գնա՜ց, գնա՜ց, ետ չեկավ,
+                Անկուշտ մահին, սև հողին
+                Գերի մնաց, ե՜տ չեկավ:
+                
+                * * *
+                Ու՞ր կորա՜ն…
+                Մոտիկներս ու՞ր կորա՜ն,
+                Ինչքան լացի, ձեն ածի`
+                Ձեն չտվին, լու՜ռ կորան:
+                
+                1916
+                ———————————————————————
+
+                Արևելքի եդեմներին իջավ պայծառ իրիկուն,
+                Հեքիաթական պալատներում սպասում են իմ հոգուն.
+                Ի՜նչ եմ շինում էս ցեխերում, աղմուկի մեջ վայրենի…
+                Ա՜խ, թե նորից գտնեմ ճամփան դեպի էնտե՜ղ, դեպի տու՜ն…
+
+                * * *
+
+                Դու մի անհայտ Բանաստեղծ ես` չտեսնված մինչ էսօր,
+                Առանց խոսքի երգ ես թափում հայացքներով լուսավոր:
+                Ես էլ, ասենք, զարմանալի Ընթերցող եմ բախտավոր,
+                Որ կարդում եմ էդ երգերը էսքան հեշտ ու էսքան խոր:
+
+                * * *
+
+                Հե՜յ ագահ մարդ, հե՜յ անգոհ մարդ, միտքդ երկար, կյանքդ կարճ,
+                Քանի՜ քանիսն անցնա քեզ պես, քեզնից առաջ, քո առաջ.
+                Ի՜նչ են տարել նրանք կյանքից, թե ինչ տանես դու քեզ հետ,
+                Խաղաղ անցի՛ր, ուրախ անցի՛ր երկու օրվան էս ճամփեդ:
+
+                * * *
+
+                Ազատ օրը, ազատ սերը, ամեն բարիք իր ձեռքին,
+                Տանջում ,տանջվում, որոնում է ու դժբախտ է նա կրկին,
+                Է՜յ անխելք մարդ, ե՞րբ տի թողնես ապրողն ապրի սրտալի,
+                Ե՞րբ տի ապրես ու վայելես էս աշխարհքը շեն ու լի:
+
+                * * *
+
+                Քուն թե արթուն` օրիս շատը երազ եղավ, անցկացավ,
+                Երազն էլ, նուրբ ու խուսափուկ, վռազ եղավ, անցկացավ.
+                Վռազ անցան երազ, մուրազ, ու չհասա ոչ մեկին,
+                Կյանքս թեթև տանուլ տված գրազ եղավ, անցկացավ:
+
+                * * *
+
+                Ո՞ր աշխարհքում ունեմ շատ բան. միտք եմ անում` է՞ս, թե՞ էն.
+                Մեջտեղ կանգնած` միտք եմ անում, չեմ իմանում` է՞ս, թե՞ էն.
+                Աստված ինքն էլ տարակուսած չի հասկանում` ինչ անի,
+                Տանի՜, թողնի՜, ո՞րն է բարին, որ սահմանում, է՞ս, թե՞ էն:
+
+
+                1919
+                ————————————————————————-
+                </pre>
+    
+                <pre>
+                <strong>Փարվանա</strong>
+                
+                I
+
+                Բարձրագահ Աբուլն ու Մըթին սարեր
+                Մեջք մեջքի տըված կանգնել վեհափառ,
+                Իրենց ուսերին, Ջավախքից էլ վեր՝
+                Բըռնած պահում են մի ուրիշ աշխարհ:
+
+                Ասում են՝ էնտեղ արծըվի նըման,
+                Ծիծղուն, կապուտակ երկընքի ծոցում,
+                Նըստում էր էն սեգ սարերի արքան
+                Իրեն Փարվանա ճերմակ ամրոցում:
+
+                Փարվանա արքան մի աղջիկ ուներ.
+                Ու ոչ մի որսկան դեռ իրեն օրում
+                Էնքան գեղեցիկ եղնիկ չէր տեսել`
+                Իր որսն անելիս Մըթին սարերում:
+
+                Աշխույժ մանկությամբ զարդարում էր նա
+                Ծերության օրերն ու սարերն իր հոր,
+                Ու ապրում էր ծեր արքան Փարվանա
+                Իրեն էն քընքուշ ծաղկով բախտավոր:
+
+                Մեծ բախտը սակայն առաջևն էր դեռ.
+                Եկավ էն օրն էլ հասավ երջանիկ,
+                Ու ղըրկեց արքան ուրախ դեսպաններ
+                Ամեն մի ամրոց, ամեն արքունիք:
+
+                — Ո՜րտեղ է, ասավ, էն քաջը, թե կա,
+                Իմ չընաշխարհիկ դըստերն արժանի,
+                Թող առնի իր ձին, իր զենքն ու զըրահ,
+                Գա՜, ցույց տա իրեն, իր բախտը տանի…
+
+                II
+
+
+                Հագած, կապած զենք ու զըրահ,
+                Ձիանք հեծած ամեհի,
+                Ահա եկել հավաքվել են
+                Կըտրիճները Կովկասի,
+                Ծեր Փարվանա թագավորի
+                Ապարանքի հանդիման
+                Կազմ ու պատրաստ սպասում են
+                Մոտիկ ժամին մըրցության:
+                Ըսպասում է ողջ աշխարհքը՝
+                Եկած, կիտված Փարվանա,
+                Թե ո՞ր կըտրիճն արդյոք պիտի
+                Էն սիրունին տիրանա:
+
+                Հընչեց փողը: Ահա փունջ-փունջ
+                Դըրանիկներ, նաժիշտներ,
+                Ահա աղջիկն իր նազելի
+                Ու թագավորն ալեհեր:
+                Հայրը ինչպես մըռայլ մի ամպ,
+                Աղջիկն անուշ մի լուսին,
+                Ամպ ու լուսին իրար փարված՝
+                Դուրս են գալի միասին:
+                Հառաչում է ողջ աշխարհքը.
+                Կըտրիճները, քարացած,
+                Երազների մեջ են ընկնում՝
+                Էս աշխարհքից վերացած:
+                — Նայի՛ր, դստրի՛կ, իշխանազուն
+                Էս քաջերին լայնալանջ,
+                Այժմ պիտի հանդես դուրս գան,
+                Պայքար մըտնեն քո առաջ.
+                Մեկը իրեն ուժը ցույց տա,
+                Մյուսը՝ շընորհքն իր բազկի,
+                Ո՛րը՝ ճարպիկ ձիարշավը,
+                Ո՛րն էլ՝ թափը իր վազքի:
+                Իսկ երբ կըռիվն առնի դադար,
+                Հայտնի լինին քաջն ու վատ,
+                Ու երբ անցնեն մեր առջևից
+                Կըտրիճները պայազատ,
+                Ընտրի՛ր, զարկի՛ր ձեռքիդ խնձորն
+                Անհաղթներից անհաղթին,
+                Որ ողջ աշխարհ մայիլ մընա
+                Անզուգական քո բախտին:
+
+                Ասավ արքան, ձեռքը ձըգեց,
+                Նըշան տըվավ պայքարին,
+                Այնինչ՝ աղջիկն առաջ եկավ՝
+                Կարմիր խնձորն իր ձեռին:
+                — Գուցե, հայրի՛կ, տըկար լավին
+                Հաղթի մի վես տըմարդի,
+                Բայց չի կարող լինել երբեք
+                Նա սիրելին իմ սըրտի…
+                — Է՜յ, Փարվանա չըքնաղ փերի,
+                Ի՞նչն է հավան քո սըրտին,—
+                Խըռնըվում են կըտրիճները,
+                Խընդրում կըրկին ու կըրկին:
+
+                — Գա՞նձ ես ուզում, ոսկի՞, արծա՞թ,
+                Անգին քարեր ու գոհա՞ր,
+                Ա՞ստղ ես ուզում, մենք երկընքից
+                Վեր կըբերենք քեզ համար:
+                — Ինչի՞ս են պետք ոսկին, արծաթ
+                Եվ կամ աստղը երկընքի,
+                Ոչ էլ գոհար եմ պահանջում
+                Սեր-ընկերից իմ կյանքի:
+                Ես նըրանից հուր եմ ուզում,
+                Անշեջ հուրը սըրբազան,
+                Ով կըբերի անշեջ հուրը,
+                Նա է ընտրած իմ փեսան…
+
+                Ասավ աղջիկն, իրար անցան
+                Կըտրիճները քաջարի,
+                Ձիանք հեծած թըռան հապճեպ
+                Դեպի չորս կողմն աշխարհի:
+                Թըռա՜ն, շուտով գըտնեն, բերեն
+                Անշեջ հուրը աղջըկան.
+                Բայց… տարիք են գալի՜ս, գընո՜ւմ,
+                Նըրանք չըկան ու չըկան…
+
+                III
+
+
+                — Հայրի՛կ, ինչո՞ւ ետ չըդարձան
+                Էն քաջերը սիրատենչ.
+                Մի՞թե, հայրի՛կ, ինձ մոռացան,
+                Էլ չեն բերիլ հուրն անշեջ:
+
+                — Ո՜չ, իմ դըստրիկ, կըգան անշուշտ
+                Ու կըբերեն էս տարի.
+                Կըռիվներով արյունըռուշտ
+                Լիքն է ճամփեն քաջերի:
+                Ո՜վ իմանա, պետք է անցնեն
+                Մութ աշխարհքից, սև ջըրից.
+                Ո՜վ իմանա, պետք է փախցնեն
+                Յոթգըլխանի դևերից:
+
+                Անց է կենում դարձյալ տարին:
+                Նայում է կույսն ամեն օր.
+                — Ո՜ւր է, հայրի՛կ, ե՞րբ կըգա նա՝
+                Սարից թըռած ձիավոր:
+
+                Միշտ երազում ես տեսնում եմ
+                Էն հերոսին ապագա.
+                Հուր կարոտով թըռած իմ դեմ,
+                Լուսանում է… ու չըկա:
+
+                — Կըգա, դըստրի՛կ, իմ թանկագին,
+                Հեշտ չի բերվում հուրն անշեջ.
+                Շատ-շատ անգամ բերող հոգին
+                Ինքն է այրվում նըրա մեջ…
+
+                Անց է կենում դարձյալ տարին:
+                Նայում է կույսն ամեն օր.
+                Ոչ մի սարից, ոչ մի ճամփում
+                Չի երևում ձիավոր:
+
+                — Հայրի՛կ, հայրի՛կ, մի՞թե չըկա
+                Էս աշխարհքում անշեջ հուր.
+                Թառամում է սիրտըս ահա,
+                Պաղ է էս կյանքն ու տըխուր…
+
+                Էլ չի խոսում. մռայլ, տըրտում,
+                Լուռ է արքան ալևոր,
+                Սև-սև ցավերն իրեն սըրտում՝
+                Միտք է անում գըլխակոր:
+
+                IV
+
+                Էսպես անցան շատ տարիներ.
+                Տըխուր աղջիկն արքայի
+                Նայե՜ց, նայե՜ց սարերն ի վեր
+                Ճամփաներին ամայի,
+                Հույսը հատավ… ու լաց եղավ.
+                Էնքա՜ն արավ լաց ու կոծ,
+                Որ լիճ կըտրեց արտասուքը,
+                Ծածկեց քաղաքն ու ամրոց.
+                Ծածկե՜ց, կորա՜ն, ինքն էլ հետը…
+                Այժըմ էնտեղ տըրտմաշուք
+                Խոր Փարվանա լիճն է ծըփում,
+                Հըստա՜կ, ինչպես արտասուք:
+                Ու էն վըճիտ ջըրերի տակ
+                Ցույց են տալի մինչ էսօր
+                Ծեր արքայի ճերմակ ամրոցն
+                Ու շենքերը փառավոր:
+
+                * * *
+
+                Ասում են, էն թիթեռները,
+                Որ գիշերվա խավարում,
+                Որտեղ ճըրագ, որտեղ կըրակ,
+                Որտեղ լույս է հենց վառվում,
+                Հավաքվում են, շուրջը պատում,
+                Մեջն են ընկնում խելագար,
+                Ասում են, թե էն Փարվանա
+                Ջահիլներն են սիրավառ:
+                Ըշտապելուց թև են առել,
+                Դարձել թեթև թիթեռներ,
+                Ու տակավին հուր տեսնելիս՝
+                Մեջն են ընկնում անհամբեր.
+                Ջանք է անում ամեն մինը,
+                Շուտով տանի, տիրանա…
+                Ու այրվում են, այրվո՜ւմ անվերջ
+                Կըտրիճները Փարվանա:
+
+                1902
+                ————————————————————————-
+
+                </pre>
+    
+                <pre>
+                <strong>Parvana</strong>
+                
+                The high-throned Abul and Metin mountains
+                Back-to-back in proud silence stand,
+                Holding high on their mighty shoulders
+                Parvana—a beautiful ancient land.
+                And people say that there in his castle
+                Over the steeps, next to the sky,
+                Lived a king, the hoary lord of the mountains
+                Who ruled Parvana in days gone by.
+                The king had a daughter, and such was her charm,
+                That no one ever in his life did meet,
+                Hunting among the lofty mountains,
+                A doe so beautiful and so sweet.
+                His gray old age and his mountain realm
+                With her childish gaiety she adorned
+                And the old but happy King of Parvana
+                His darling daughter simply adored.
+                The years to come promised still more joy;
+                She came of age, and, legends report,
+                The king despatched his ambassadors
+                To every castle and to every court.
+                “Where is, he inquired, “the courageous youth
+                That can win my daughter by main and might?
+                Let him don his armour and mount his steed
+                And come to take my daughter by right.”
+                II
+                Their sabres clanged and clattered,
+                Their horses pranced and reared
+                When before the castle
+                Those brave young knights appeared.
+                In front of the grand white castle
+                Of Parvana’s hoary king
+                All waited in impatience
+                For the contest to begin.
+                Folk from all the neighbourhood
+                Had left their hearth and home
+                To see who wins the maiden
+                For his very own.
+                The trumpet echoed. All the court
+                Assembled in the square.
+                Then came the gracious hoary king
+                And his daughter fair.
+                Her father came like a gloomy cloud
+                And like a moon came she
+                Arm-in-arm, they were a sight
+                That all eyes were glad to see.
+                And all who gathered were amazed
+                That such a maid could be.
+                The brave young men stood silently
+                In spellbound reverie.
+                “Now look you at these splendid knights
+                All come to seek your hand.
+                Prepared to fight in contest fair,
+                Upon the square they stand.
+                “One will display his manly strength,
+                Another his skill with arms,
+                A further one his horsemanship,
+                Still another his grace and charm.
+                “And when the contest comes to end,
+                And they come to claim their prize,
+                And when the bravest of them file
+                In parade before your eyes,
+                “Then throw an apple to your choice,
+                The champion of the day,
+                And let the whole world envy you,
+                So happy and so gay.
+                The king was about to raise his hand
+                That the contest may begin
+                When the princess set the apple by
+                And thus she spoke to him:
+                “What if a mighty-muscled knave
+                Beats a gentle-hearted dove?
+                He may be champion of the day
+                But never win my love."
+                Then asked the rivals gathered
+                Around the royal stand:
+                “What would a champion have to do
+                To win your heart and hand?”
+                “Is it wealth you want? We’ll get you boats
+                With gold and silver laden.
+                Or is your wish a shining star?
+                We’ll bring it down from heaven.’’
+                “No need have I for silver,
+                No need have I for gold.
+                And though you bring me gems and pearls,
+                You still may leave me cold.
+                “The man that is to be my lord
+                Must find undying fire.
+                Whoever brings the fire to me
+                Will have his heart’s desire.”
+                The gallant knights then took to horse
+                And gallop off did they.
+                Each chose himself a different road
+                And followed each his way.
+                They rode to fetch the princess fire
+                That would forever burn.
+                But though many years rolled by,
+                Not one man did return.
+                III
+                “Oh, Father dear, where are the knights,
+                Why do they not return?
+                Perhaps it can’t be found at all,
+                Fire that will always burn?”
+                “Yes, daughter dear, they sure will come
+                And bring undying fire.
+                But the roads and ways of dauntless men
+                Are full of dangers dire.
+                “They have to pass through evil ground
+                And in evil water swim,
+                And clash in deadly battle
+                With the spiteful Jinn.”
+                Year after year went by again
+                But no one brought the flame.
+                “Look from the window, Father dear;
+                It’s surely time they came.
+                “More and more often in my dreams
+                My faithful knight I see,
+                Holding the fire, he gallops up,
+                But I wake, and gone is he!”
+                “Be patient, daughter, he will come!
+                In seeking for the fire
+                He who goes after it himself
+                May oftentime expire.”
+                Again the years go rolling by.
+                The princess waits in vain.
+                The horsemen never came in sight
+                On the mountains or the plain.
+                “Oh, Father dear, I fade with grief,
+                Sorrow burns my soul.
+                Can it be there is no such fire
+                In the world at all?”
+                But nothing could the mournful king
+                To his dear child reply.
+                Black doubt besieged his hoary head
+                And sorely did he sigh.
+                IV
+                Year after year sped past again.
+                His daughter watched in vain
+                The melancholy neighbourhood:
+                No horse nor rider came.
+                At last the princess lost all hope,
+                And sad tears did she weep
+                And soon the castle lay beneath
+                A lake both vast and deep.
+                The princess vanished in the lake
+                Whose source were her sweet eyes;
+                Since then among the mountains tall
+                Clear as a tear it lies.
+                Beneath the lake’s transparent waves,
+                In the shadowy, green deeps,
+                The castle of the luckless king
+                Its haughty look still keeps.
+                And now, as soon as twilight falls
+                And windows come alight
+                A myriad moths as if possessed
+                Begin their nightly flight.
+                And people say those luckless moths
+                That perish in the flame
+                Were once Parvana’ s gallant knights
+                Whom passion made insane.
+                Turned into moths upon their way,
+                Whenever they see fire
+                They fly to it from far and near
+                And in the flame expire.
+
+                1902
+                ————————————————————————-
+                </pre>
+            </div>
+            
+        {{else}}
+            <script>
+                document.title = 'ուբյու';
+            </script>
+            <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+        {{/if}}
+    </div>
+
+</template>

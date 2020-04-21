@@ -1,16 +1,16 @@
-<template name="vahanTerian">
+<template name="hovhannesTumanyan">
     {{#if currentUser}}
         <script>
-            document.title = "Learn: Vahan Terian";
+            document.title = "Learn: Hovhannes Tumanyan";
         </script>
         <div class='container'>
-            <a href="{{pathFor route='vahan-terian-lib'}}" class="btn btn-primary" style='float: right;'>{{_ "Read Terian's Works"}}</a>
+            <a href="{{pathFor route='hovhannes-tumanyan-lib'}}" class="btn btn-primary" style='float: right;'>{{_ "Read Tumanyan's Works"}}</a>
             <a href="{{pathFor route='armenian-literature'}}" class="btn btn-primary" style='float: right;'>{{_ "Back"}}</a>
             <hr>
-            <h3>{{_ "Vahan Terian"}}</h3>
+            <h3>{{_ "Hovhannes Tumanyan"}}</h3>
             <div class='div-border'>
                 <div>
-                    <img alt="vahan-terian" src='/images/learn_pics/terian-1.jpg' width='35%'>
+                    <img alt="hovhannes-tumanyan" src='/images/learn_pics/tumanyan-1.jpg' width='35%'>
                 </div>  
                 <div class='info-container' style="top: 230px; left: 290px"> <!-- fuckkkkkkk -->
                     {{#each getPar0}}
@@ -20,7 +20,6 @@
                             <p class='learn'><b>Born:  </b>{{bornEng}}</p>
                             <p class='learn'><b>Died:  </b>{{diedEng}}</p>
                             <p class='learn'><b>Nationality:  </b>{{nationalityEng}}</p>
-                            <p class='learn'><b>Education:  </b>{{educationEng}}</p>
                             <p class='learn'><b>Period:  </b>{{periodEng}}</p> 
                         {{else}}
                         <!-- armenian content -->
@@ -28,7 +27,6 @@
                             <p class='learn'><b>{{_ "Born"}}:  </b>{{bornHy}}</p>
                             <p class='learn'><b>{{_ "Died"}}:  </b>{{diedHy}}</p>
                             <p class='learn'><b>{{_ "Nationality"}}:  </b>{{nationalityHy}}</p>
-                            <p class='learn'><b>{{_ "Education"}}:  </b>{{educationHy}}</p>
                             <p class='learn'><b>{{_ "Period"}}:  </b>{{periodHy}}</p>     
                         {{/if}}
                     {{/each}}
@@ -46,6 +44,10 @@
                 {{#each getPar3}}
                 <p class='learn'>{{parEng}}</p>
                 {{/each}}
+                {{#each getPar4}}
+                <p class='learn'>{{parEng}}</p>
+                {{/each}}
+        
             {{else}}
             <!-- armenian content -->
                 {{#each getPar1}}
@@ -57,6 +59,10 @@
                 {{#each getPar3}}
                 <p class='learn'>{{parHy}}</p>
                 {{/each}}
+                {{#each getPar4}}
+                <p class='learn'>{{parHy}}</p>
+                {{/each}}
+         
             {{/if}}    
         </div>
     {{else}}

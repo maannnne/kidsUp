@@ -40,6 +40,10 @@ Template.ScoreDetails.events({
 Template.ScoreDetails.helpers({
     'getScore': function() {
         return Session.get('points');
+    },
+    'checkIfScoreIs5': function() {
+        let score = Session.get('points');
+        return (score === 5) ? true : false;
     }
 });
 
