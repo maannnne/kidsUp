@@ -8,8 +8,8 @@ import './templates/Learn/ArmenianLiterature/HovhannesTumanyan';
 import './templates/Learn/ArmenianArt/ArmenianArt';
 import './templates/Learn/ArmenianLiterature/ArmenianLiterature';
 import './templates/Learn/ArmenianMusic/ArmenianMusic';
-import './templates/Learn/ArmenianMusic/ArnoBabajanyan';
-import './templates/Learn/ArmenianMusic/AramKhachatryan';
+import './templates/Learn/ArmenianMusic/ArnoBabajanian';
+import './templates/Learn/ArmenianMusic/AramKhachaturian';
 
 import './templates/Quizzes/Quizzes';
 import './templates/Quizzes/Quiz1';
@@ -19,7 +19,8 @@ import './templates/Libraryy/Library';
 import './templates/Libraryy/VahanTerianLib';
 import './templates/Libraryy/HovhannesTumanyanLib';
 import './templates/Libraryy/MartirosSaryanGal';
-import './templates/Libraryy/ArnoBabajanyanMusic';
+import './templates/Libraryy/ArnoBabajanianMusic';
+import './templates/Libraryy/AramKhachaturianMusic';
 
 import './templates/TakeNotes/TakeNotes';
 import './templates/Home';
@@ -41,14 +42,15 @@ import './HomeJS/Home';
 import './LearnJS/VahanTerian';
 import './LearnJS/HovhannesTumanyan';
 import './LearnJS/MartirosSaryan';
+import './LearnJS/ArnoBabajanian';
 import '../i18n/i18n';
 
 //COLLECTIONS
 LearnTerian = new Mongo.Collection('learnterian');
 LearnTumanyan = new Mongo.Collection('learntumanyan');
 LearnSaryan = new Mongo.Collection('learnsaryan');
-LearnBabajanyan = new Mongo.Collection('learnbabajanyan');
-LearnKhachatryan = new Mongo.Collection('learnkhachatryan');
+LearnBabajanian = new Mongo.Collection('learnbabajanian');
+LearnKhachaturian = new Mongo.Collection('learnkhachaturiana');
 ArmArtQuiz = new Mongo.Collection('armartquiz');
 ArmArtRadios = new Mongo.Collection('armartradios');
 ArmLitQuiz = new Mongo.Collection('armlitquiz');
@@ -90,11 +92,11 @@ Router.route('/ArmenianLiterature/HovhannesTumanyan', {
 Router.route('/ArmenianArt/MartirosSaryan', {
   name: 'martiros-saryan'
 });
-Router.route('/ArmenianMusic/ArnoBabajanyan', {
-  name: 'arno-babajanyan'
+Router.route('/ArmenianMusic/ArnoBabajanian', {
+  name: 'arno-babajanian'
 });
-Router.route('/ArmenianMusic/AramKhachatryan', {
-  name: 'aram-khachatryan'
+Router.route('/ArmenianMusic/AramKhachaturian', {
+  name: 'aram-khachaturian'
 });
 
 
@@ -136,10 +138,13 @@ Router.route('/Library/MartirosSaryanGal', {
   name: 'martiros-saryan-gal'
 });
 
-Router.route('/Library/ArnoBabadjanianMusic', {
-  name: 'arno-babadjanian-music'
+Router.route('/Library/ArnoBabajanianMusic', {
+  name: 'arno-babajanian-music'
 });
 
+Router.route('/Library/AramKhachaturianMusic', {
+  name: 'aram-khachaturian-music'
+});
   
 
 
@@ -280,6 +285,56 @@ Router.route('/login', {
 //   parEng: 'In 1912 Tumanyan was elected the president of the Company of Caucasus Armenian Writers. In the fall of 1921, Tumanyan went to Constantinople to find support of Armenian refugees. After months spent there, he returned ill. After surgery in 1922, he started to get better. But in September, Tumanyans disease started to progress again. He was transferred to a hospital in Moscow, where he died on March 23, 1923.',
 //   parHy: '1921 թվականի աշնանը Թումանյանը մեկնել է Կոստանդնուպոլիս՝ հայ գաղթականների համար օգնություն գտնելու նպատակով։ Մի քանի ամիս մնալով այնտեղ` նա վերադառնում է հիվանդացած։ Մահացել է 1923 թվականին՝ Մոսկվայում։ Թումանյանի ստեղծագործությունների հիման վրա նկարահանվել են մի շարք ֆիլմեր, ինչպես նաև ստեղծվել են Անուշ (1912) և Ալմաստ (1930) օպերաները հիմնված են Թումանյանի ստեղծագործությունների վրա։ Թումանյանը մահացել է 1923 թվականի մարտի 23-ին երեկոյան 9-ին՝ 54 տարեկան հասակում, թաղվել է Խոջիվանքի գերեզմանոցում։'
 // });  
+
+
+
+
+
+// LearnBabajanian.insert({
+//   parID: 0,
+//   fullNameEng: "Arno Babajanian",
+//   bornEng: "22 January, 1921",
+//   diedEng: "11 November, 1983 (aged 62)",
+//   nationalityEng: "Armenian",
+//   periodEng: "1952-1983",
+//   fullNameHy: "Առնո Բաբաջանյան",
+//   bornHy: "Հունվարի 22, 1921",
+//   diedHy: "Նոյեմբերի 11, 1983 (62 տարեկանում)",
+//   nationalityHy: "Հայ",
+//   periodHy: "1952-1983"
+// });
+
+// LearnBabajanian.insert({
+//   parID: 1,
+//   parEng: 'Arno Babajanian was an Armenian composer and pianist during the Soviet era.',
+//   parHy: 'Առնո Հարությունի Բաբաջանյան, հայ կոմպոզիտոր և դաշնակահար, Խորհրդային Միության և ՀԽՍՀ ժողովրդական արտիստ։'
+// });
+// LearnBabajanian.insert({
+//   parID: 2,
+//   parEng: 'Babajanian was born in Yerevan, Armenia. By age 5, his musical talent was apparent, and the composer Aram Khachaturian suggested that the boy be given proper music training. Two years later, in 1928, Babajanian entered the Yerevan State Musical Conservatory. In 1938, he continued his studies in Moscow with Vissarion Shebalin.',
+//   parHy: 'Առնո Բաբաջանյանը ծնվել է Երևանում, 1921 թվականի հունվարի 22-ին։ Իր առաջին երաժշտական ստեղծագործությունը գրել է 9 տարեկան հասակում։ 1938 թվականին մեկնում է Մոսկվա և միանգամից ընդունվում է Գնեսինների անվան երաժշտական քոլեջի վերջին կուրս։ Այն ավարտելուց հետո ընդունվում է Պ. Ի. Չայկովսկու անվան ՄՊԿ (Բ. Մ. Բեռլինի դաշնամուրի դասարան): Նրա տաղանդը Արամ Խաչատրյանը դեռ հինգ տարեկանում նկատելով՝ որոշում է, որ տղան պետք է երաժշտությամբ զբաղվի։ Դրանից հետո, 1929-ին ընդունվել է Երևանի պետական կոնսերվատորիային կից երաժշտական դպրոցը, որն ավարտելուց հետո սովորում է կոնսերվատորիայում։ Այնուհետև, 1948-ին ուսումը շարունակել է Մոսկվայի կոնսերվատորիայի դաշնամուրի բաժնում՝ միաժամանակ կատարելագործվելով Մոսկվայում գործող Հայաստանի կուլտուրայի տանը կից ստուդիայում։'
+// });
+// LearnBabajanian.insert({
+//   parID: 3,
+//   parEng: 'He later returned to Yerevan, where from 1950 to 1956 he taught at the conservatory. In 1952 he wrote the Piano Trio in F-sharp minor. It received immediate acclaim and was regarded as a masterpiece from the time of its premiere. Subsequently, he undertook concert tours throughout the Soviet Union and Europe. In 1971, he was named a Peoples Artist of the Soviet Union.',
+//   parHy: '1950-1956 թվականներին դասավանդել է Երևանի կոնսերվատորիայում։ 1956-ից ապրել և աշխատել է Մոսկվայում։'
+// });  
+// LearnBabajanian.insert({
+//   parID: 4,
+//   parEng: 'Babajanian wrote in various musical genres, including many popular songs in collaboration with leading poets such as Yevgeny Yevtushenko and Robert Rozhdestvensky. Much of his music is rooted in Armenian folk music and folklore, which he generally uses in the virtuosic style of Rachmaninov and Khachaturian. His later works were influenced by Prokofiev and Bartók. Praised by Dmitri Shostakovich as a "brilliant piano teacher", Babajanian was also a noted pianist and often performed his own works in concerts.',
+//   parHy: 'Առնո Բաբաջանյանի ստեղծագործական հարուստ ժառանգությունը ներառում է երգեր, գործիքային կատարումներ, սիմֆոնիկ երաժշտություն։ Նա ստեղծագործել է տարբեր ոճերով՝ դասական, պոպ, ջազ։ Բաբաջանյանի ստեղծագործական ոճը ձևավորվել է Արամ Խաչատրյանի և Սերգեյ Ռախմանինովի ազդեցությամբ։ Իսկ նրա ստեղծագործական անհատականությունը դրսևորվել է դաշնամուրի և նվագախմբի համար գրված «Հերոսական բալլադում» (1950) և դաշնամուրային տրիոյում (1952)։ Լայն ժողովրդականություն վայելող «Հայկական ռապսոդիան» գրել է 1950-ին։ Կոմպոզիտորը մեծ հեղինակություն է վայելել և համագործակցել է պոետ Ռոբերտ Ռոժդեստվենսկու և երգիչ Մուսլիմ Մագոմաևի հետ։ (երգեր՝ «Королева красоты», «Голубая тайга», «Улыбнись», «Будь со мной», «В нежданный час», «Встреча», «Воспоминание», «Позови меня», «Загадай желание», «Благодарю тебя», «Свадьба»)։ Ֆենոմենալ հաջողության հասան համահեղինակներ Եվգենի Եվտուշենկոյի հետ գրված երգերը ( «Не спеши», «Чёртово колесо», «Твои следы»), Անդրեյ Վոզնեսենսկու հետ գրված «Год любви», «Москва-река», «Верни мне музыку» երգերը և Լեոնիդ Դերբենյովի հետ համատեղ գրված «Лучший город земли» երգը։ «Առաջին սիրո երգը» и «Երևան»- ը համարվում են որպես հիմն հարազատ քաղաքի։ Խորհրդային լավագույն ֆիլմերից շատերում հնչում են նրա հեղինակած կատարումները՝ «Առաջին սիրո երգը», «Երջանկության մեխանիկան», «Հարսնացուն հյուսիսից» և այլն։ Նա գրել է տարբեր ստեղծագործություններ՝ «Էլեգիա», «Նոկտյուրն» և այլն։ Առնո Բաբաջանյանը մահացել է Մոսկվայում, 1983 թվականի նոյեմբերի 11-ին։'
+// });  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

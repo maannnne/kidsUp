@@ -1,25 +1,26 @@
-import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import { Session } from 'meteor/session';
 import { TAPi18n } from 'meteor/tap:i18n';
 
 import '../main.html';
 import '../main';
-import '../templates/Learn/ArmenianLiterature/VahanTerian';
+import '../templates/Learn/ArmenianMusic/ArnoBabajanian';
 
 
-Template.vahanTerian.helpers ({
+Template.arnoBabajanian.helpers ({
     'getPar0': function() {
-        return LearnTerian.find({parID: 0});
+        return LearnBabajanian.find({parID: 0});
     },
     'getPar1': function() {
-        return LearnTerian.find({parID: 1});
+        return LearnBabajanian.find({parID: 1});
     },
     'getPar2': function() {
-        return LearnTerian.find({parID: 2});
+        return LearnBabajanian.find({parID: 2});
     },
     'getPar3': function() {
-        return LearnTerian.find({parID: 3});
+        return LearnBabajanian.find({parID: 3});
+    },
+    'getPar4': function() {
+        return LearnBabajanian.find({parID: 4});
     },
     'getCurrentLanguage': function() {
         //console.log(typeof TAPi18n.getLanguage());
