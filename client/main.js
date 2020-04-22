@@ -16,11 +16,13 @@ import './templates/Learn/ArmenianMusic/AramKhachaturian';
 import './templates/Quizzes/Quizzes';
 import './templates/Quizzes/Quiz1';
 import './templates/Quizzes/Quiz2';
+import './templates/Quizzes/Quiz3';
 
 import './templates/Libraryy/Library';
 import './templates/Libraryy/VahanTerianLib';
 import './templates/Libraryy/HovhannesTumanyanLib';
 import './templates/Libraryy/MartirosSaryanGal';
+import './templates/Libraryy/HovhannesAivazovskyGal';
 import './templates/Libraryy/ArnoBabajanianMusic';
 import './templates/Libraryy/AramKhachaturianMusic';
 
@@ -30,14 +32,12 @@ import './templates/Main';
 import './templates/Navigation';
 
 import './templates/Accounts/RegLog';
-
-
-
   
 //JS IMPORTS
 import './TakeNotesJS/TakeNotes';
 import './QuizzesJS/Quiz1';
 import './QuizzesJS/Quiz2';
+import './QuizzesJS/Quiz3';
 import './RegisterJS/RegLog';
 import './NavigationJS/Navigation';
 import './HomeJS/Home';
@@ -126,6 +126,11 @@ Router.route('/Quizzes/Quiz2', {
   template: 'Quiz2Container'
 });
 
+Router.route('/Quizzes/Quiz3', {
+  name: 'quiz3',
+  template: 'Quiz3Container'
+});
+
 
 
 
@@ -144,6 +149,9 @@ Router.route('/Library/HovhannesTumanyanLib', {
 
 Router.route('/Library/MartirosSaryanGal', {
   name: 'martiros-saryan-gal'
+});
+Router.route('/Library/HovhannesAivazovskyGal', {
+  name: 'hovhannes-aivazovsky-gal'
 });
 
 Router.route('/Library/ArnoBabajanianMusic', {
