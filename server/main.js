@@ -10,6 +10,7 @@ Meteor.startup(() => {
 export const LearnTerian = new Mongo.Collection('learnterian');
 export const LearnTumanyan = new Mongo.Collection('learntumanyan');
 export const LearnSaryan = new Mongo.Collection('learnsaryan');
+export const LearnAivazovsky = new Mongo.Collection('learnaivazovsky');
 export const LearnBabajanian = new Mongo.Collection('learnbabajanian');
 export const LearnKhachaturian = new Mongo.Collection('learnkhachaturian');
 export const ArmLitQuiz = new Mongo.Collection('armlitquiz');

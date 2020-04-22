@@ -1,3 +1,59 @@
 <template name='aramKhachaturianMusic'>
-    <p>aram kh music</p>
+    {{#if currentUser}}
+        <script>
+            document.title= "Aram Khachaturian Music";
+        </script>
+        <div class='container'>
+            <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Music"}}</a>
+            <a href="{{pathFor route='aram-khachaturian'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Khachaturian"}}</a>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Aram Khachaturian - Toccata"}}</h3>
+                <audio controls>
+                    <source src='/music/aram-khachaturian-toccata.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Aram Khachaturian - Sabre Dance"}}</h3>
+                <audio controls>
+                    <source src='/music/aram-khachaturian-sabre-dance.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Aram Khachaturian - Masquerade Suite - Waltz"}}</h3>
+                <audio controls>
+                    <source src='/music/aram-khachaturian-masquerade-suite-waltz.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Aram Khachaturian - Lezginka from Gayane"}}</h3>
+                <audio controls>
+                    <source src='/music/aram-khachaturian-lezginka-from-gayane.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+            <hr>
+            <div class='audio-container'>
+                <h3>{{_ "Aram Khachaturian - Adagio of Spartacus and Phygia"}}</h3>
+                <audio controls>
+                    <source src='/music/aram-khachaturian-adagio-of-spartacus-and-phrygia.mp3' type='audio/mpeg'>
+                        {{_ "Your browser does not support this audio type"}}
+                </audio>
+            </div>
+
+
+            
+        </div>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
 </template>

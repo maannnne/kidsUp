@@ -23,6 +23,7 @@
 
 <template name="ScoreDetails">
     {{#if currentUser}}
+   
     <div class='quiz-item'>
         {{#if checkIfScoreIs5}}
         <div style="text-align: center">
@@ -44,6 +45,7 @@
 
 
 <template name="Quiz1">
+    
     <div>
         {{#if getCurrentLanguage}}
         <form>
@@ -434,27 +436,12 @@
 
 
         <div class='quiz-submit'> 
+            
             <input type='Submit' class="btn btn-primary" style='float: right;' value="{{_ 'Check the answers!'}}">
+            <!--<a href="{{pathFor route='quizzes'}}" class="btn btn-primary" style='float: right;'>{{_ "Back"}}</a>-->
         </div>
         </form>
         {{/if}}
     </div>
 
 </template>
-
-
-
-
-<!-- 
-<template name="Quiz1">
-    
-    {{#if TemplateVar.get "showQ1"}}
-    {{> Q1Q1}}
-    {{else}}
-    {{> start1}}
-    {{/if}}
-    {{> Q1Q1}}
-</template> 
--->
-
-

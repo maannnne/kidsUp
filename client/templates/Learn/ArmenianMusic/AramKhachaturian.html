@@ -1,4 +1,93 @@
 <template name='aramKhachaturian'>
-    <p>a kh</p>
+    {{#if currentUser}}
+    <script>
+        document.title = "Learn: Aram Khachaturian";
+    </script>
+    <div class='container'>
+        <a href="{{pathFor route='aram-khachaturian-music'}}" class="btn btn-primary" style='float: right;'>{{_ "Listen to Khachaturian's Works"}}</a>
+        <a href="{{pathFor route='armenian-music'}}" class="btn btn-primary" style='float: right;'>{{_ "Back"}}</a>
+        <hr>
+        <h3>{{_ "Aram Khachaturian"}}</h3>
+        <div class='div-border'>
+            <div>
+                <img alt="aram-khachaturian" src='/images/learn_pics/khachaturian-1.jpg' width='35%'>
+            </div>  
+            <div class='info-container' style="top: 230px; left: 290px"> <!-- fuckkkkkkk -->
+                {{#each getPar0}}
+                    {{#if getCurrentLanguage}}
+                    <!-- english content -->
+                        <p class='learn'><b>Full Name:  </b>{{fullNameEng}}</p>
+                        <p class='learn'><b>Born:  </b>{{bornEng}}</p>
+                        <p class='learn'><b>Died:  </b>{{diedEng}}</p>
+                        <p class='learn'><b>Nationality:  </b>{{nationalityEng}}</p>
+                        <p class='learn'><b>Period:  </b>{{periodEng}}</p> 
+                    {{else}}
+                    <!-- armenian content -->
+                        <p class='learn'><b>{{_ "Full Name"}}:  </b>{{fullNameHy}}</p>
+                        <p class='learn'><b>{{_ "Born"}}:  </b>{{bornHy}}</p>
+                        <p class='learn'><b>{{_ "Died"}}:  </b>{{diedHy}}</p>
+                        <p class='learn'><b>{{_ "Nationality"}}:  </b>{{nationalityHy}}</p>
+                        <p class='learn'><b>{{_ "Period"}}:  </b>{{periodHy}}</p>     
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
+            
+        {{#if getCurrentLanguage}}
+        <!-- english content -->
+            {{#each getPar1}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar2}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar3}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar4}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar5}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar6}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+            {{#each getPar7}}
+            <p class='learn'>{{parEng}}</p>
+            {{/each}}
+    
+        {{else}}
+        <!-- armenian content -->
+            {{#each getPar1}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar2}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar3}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar4}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar5}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar6}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+            {{#each getPar7}}
+            <p class='learn'>{{parHy}}</p>
+            {{/each}}
+     
+        {{/if}}    
+    </div>
+    {{else}}
+        <script>
+            document.title="ուբյու";
+        </script>
+        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+    {{/if}}
 
 </template>

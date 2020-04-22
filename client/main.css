@@ -137,7 +137,7 @@ pre{
 }
 
 .nav-item {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .welcome-page {
@@ -161,6 +161,7 @@ pre{
 a :hover {
   text-decoration: none;
 }
+
 
 
 .welcome-group {
