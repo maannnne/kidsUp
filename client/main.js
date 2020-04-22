@@ -233,7 +233,7 @@ Router.route('/login', {
 //   diedEng: "5 May, 1972 (aged 92)",
 //   nationalityEng: "Armenian",
 //   educationEng: "Moscow School of Arts",
-//   genreEng: "portrait, landscape, still life, graphics, illustration, scenery",
+//   genreEng: "portrait, landscape, still life, illustration, scenery",
 //   fullNameHy: "Մարտիրոս Սարգսի Սարյան",
 //   bornHy: "Փետրվարի 28, 1880",
 //   diedHy: "Մայիսի 5, 1972 (92 տարեկանում)",
