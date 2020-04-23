@@ -17,8 +17,11 @@ export const ArmLitQuiz = new Mongo.Collection('armlitquiz');
 export const ArmLitRadios = new Mongo.Collection('armlitradios');
 export const ArmArtQuiz = new Mongo.Collection('armartquiz');
 export const ArmArtRadios = new Mongo.Collection('armartradios');
+export const ArmMusicQuiz = new Mongo.Collection('armmusicquiz');
+export const ArmMusicRadios = new Mongo.Collection('armmusicradios');
 export const Q1Results = new Mongo.Collection('q1results');
 export const Q2Results = new Mongo.Collection('q2results'); 
+export const Q3Results = new Mongo.Collection('q3results');
 export const Notes = new Mongo.Collection('notes');
 
 Meteor.methods({
@@ -61,6 +64,24 @@ Meteor.methods({
     } 
     today = mm + '-' + dd + '-' + yyyy;
     Q2Results.insert({userID: currentUser, score: points, date: today, sortingDate: new Date()});
+    //return Q1Results.find({userID: currentUser}, {sort: {date: -1}}).fetch()[0];
+  },
+  'insertQ3NewRes': function(points) {
+    var currentUser = Meteor.userId();
+    var today = new Date();
+    var dd = today.getDate();
+
+    var mm = today.getMonth() + 1; 
+    var yyyy = today.getFullYear();
+    if(dd < 10) {
+        dd = '0' + dd;
+    } 
+
+    if(mm < 10) {
+        mm = '0' + mm;
+    } 
+    today = mm + '-' + dd + '-' + yyyy;
+    Q3Results.insert({userID: currentUser, score: points, date: today, sortingDate: new Date()});
     //return Q1Results.find({userID: currentUser}, {sort: {date: -1}}).fetch()[0];
   },
   'removeUser': function(userID) {

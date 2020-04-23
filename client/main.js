@@ -58,10 +58,13 @@ LearnBabajanian = new Mongo.Collection('learnbabajanian');
 LearnKhachaturian = new Mongo.Collection('learnkhachaturian');
 ArmArtQuiz = new Mongo.Collection('armartquiz');
 ArmArtRadios = new Mongo.Collection('armartradios');
+ArmMusicQuiz = new Mongo.Collection('armmusicquiz');
+ArmMusicRadios = new Mongo.Collection('armmusicradios');
 ArmLitQuiz = new Mongo.Collection('armlitquiz');
 ArmLitRadios = new Mongo.Collection('armlitradios');
 Q1Results = new Mongo.Collection('q1results');
-Q2Results = new Mongo.Collection('q2results'); 
+Q2Results = new Mongo.Collection('q2results');
+Q3Results = new Mongo.Collection('q3results'); 
 Notes = new Mongo.Collection('notes');
 
 //MAIN ROUTES
@@ -474,6 +477,14 @@ Router.route('/login', {
 
 
 
+// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 1, imageName: 'question1.jpg', correctAnswer: "martirossaryan"});
+// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 2, imageName: 'question2.jpg', correctAnswer: "valentinpodpomogov"});
+// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 3, imageName: 'question3.jpg', correctAnswer: "ivanaivazovsky"});
+// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 4, imageName: 'question4.jpg', correctAnswer: "vardgessureniants"});
+// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 5, imageName: 'question5.jpg', correctAnswer: "minasavetisyan"});
+
+
+
 // ArmArtRadios.insert({textID: 1, value: 'martirossaryan',    texthy: "Մարտիրոս Սարյան", text: 'Martiros Saryan'});
 // ArmArtRadios.insert({textID: 2, value: 'valentinpodpomogov',texthy: "Վալենտին Պոդպոմոգով", text: 'Valentin Podpomogov'});
 // ArmArtRadios.insert({textID: 3, value: 'ivanaivazovsky',    texthy: "Հովհաննես Այվազովսկի", text: 'Ivan Aivazovsky'});
@@ -483,9 +494,16 @@ Router.route('/login', {
 // ArmArtRadios.insert({textID: 7, value: 'torosroslin',       texthy: "Թորոս Ռոսլին", text: 'Toros Roslin'});
 // ArmArtRadios.insert({textID: 8, value: 'hakobhakobian',     texthy: "Հակոբ Հակոբյան", text: 'Hakob Hakobian'});
 
-// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 1, imageName: 'question1.jpg', correctAnswer: "martirossaryan"});
-// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 2, imageName: 'question2.jpg', correctAnswer: "valentinpodpomogov"});
-// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 3, imageName: 'question3.jpg', correctAnswer: "ivanaivazovsky"});
-// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 4, imageName: 'question4.jpg', correctAnswer: "vardgessureniants"});
-// ArmArtQuiz.insert({questionhy: "Ո՞վ է հետևյալ նկարի հեղինակը", question: "Who is the painter of this painting?", questionID: 5, imageName: 'question5.jpg', correctAnswer: "minasavetisyan"});
-    
+// ArmMusicRadios.insert({textID: 1, value: 'arnobabajanian',    texthy: "Առնո Բաբաջանյան", text: 'Arno Babajanian'});
+// ArmMusicRadios.insert({textID: 2, value: 'aramkhachaturian',  texthy: "Արամ Խաչատրյան",  text: 'Aram Khachaturian'});
+// ArmMusicRadios.insert({textID: 3, value: 'komitas',           texthy: "Կոմիտաս",         text: 'Komitas'});
+// ArmMusicRadios.insert({textID: 4, value: 'serjtankian',       texthy: "Սերժ Թանկյան",    text: 'Serj Tankian'});
+// ArmMusicRadios.insert({textID: 5, value: 'tigranhamasyan',    texthy: "Տիգրան Համասյան", text: 'Tigran Hamasyan'});
+// ArmMusicRadios.insert({textID: 6, value: 'charlesaznavour',   texthy: "Շարլ Ազնավուր",   text: 'Charles Aznavour'});
+// ArmMusicRadios.insert({textID: 7, value: 'tigranmansurian',   texthy: "Տիգրան Մանսուրյան", text: 'Tigran Mansurian'});
+
+// ArmMusicQuiz.insert({questionhy: "Ո՞վ է այս երգի հեղինակը", question: "Who is the composer of this song?", questionID: 1, fileName: 'question1.mp3', correctAnswer: "arnobabajanian"});
+// ArmMusicQuiz.insert({questionhy: "Ո՞վ է այս երգի հեղինակը", question: "Who is the composer of this song?", questionID: 2, fileName: 'question2.mp3', correctAnswer: "aramkhachaturian"});
+// ArmMusicQuiz.insert({questionhy: "Ո՞վ է այս երգի հեղինակը", question: "Who is the composer of this song?", questionID: 3, fileName: 'question3.mp3', correctAnswer: "tigranhamasyan"});
+// ArmMusicQuiz.insert({questionhy: "Ո՞վ է այս երգի հեղինակը", question: "Who is the composer of this song?", questionID: 4, fileName: 'question4.mp3', correctAnswer: "charlesaznavour"});
+// ArmMusicQuiz.insert({questionhy: "Ո՞վ է այս երգի հեղինակը", question: "Who is the composer of this song?", questionID: 5, fileName: 'question5.mp3', correctAnswer: "serjtankian"});    

@@ -1,3 +1,513 @@
 <template name='Quiz3Container'>
+    {{#if currentUser}}
+    <script>
+        document.title="Arm Music Quiz";
+    </script>
+    {{#if isScore}}
+    {{> ScoreDetails3}}
+    {{else}}
+    {{> Quiz3}}
+    {{/if}} 
+    
+    {{#if showQuizAgain}}
+    {{> Quiz3}}
+    {{/if}}
+{{else}}
+    <script>
+        document.title = 'ուբյու';
+    </script>
+    <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+{{/if}}
+</template>
+
+
+<template name="ScoreDetails3">
+{{#if currentUser}}
+<div class='quiz-item'>
+    {{#if checkIfScoreIs5}}
+    <div style="text-align: center">
+        <img src='/images/random-kid.png' height="300px"/>
+        <h3>{{_ "Congratulations!"}} {{_ "You scored"}} {{getScore}}/5 {{_ "points! Good job!"}}</h3>
+    </div>
+    {{else}}
+        <img src='/images/vector4.png' height="260px"/>
+        <span>{{_ "Your score is"}} {{getScore}}/5</span>
+    {{/if}}
+</div>
+<div class='quiz-submit'>
+    <button  style='float: right;' class="retakeQuiz2 btn btn-primary">{{_ "Retake Quiz!"}}</button>
+</div>
+{{else}}
+<h3>ՆՕ ՅՈՒԶԵՌ</h3>
+{{/if}}
+</template>
+
+
+<template name="Quiz3">
+<div>
+    {{#if getCurrentLanguage}}
+    <form>  
+        <!-- 1 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion1}}   
+        <h3>{{question}}</h3>     
+        {{/each}} 
+        {{#each getsrc1}}
+            <audio controls>
+                <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                    {{_ "Your browser does not support this audio type"}}
+            </audio>
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio1}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt1">          
+                {{text}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio2}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt2">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio4}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt3">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 1 -->
+
+
+
+
+        <!-- 2 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion2}}
+        <h3>{{question}}</h3>   
+        {{/each}}    
+        {{#each getsrc2}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio>
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio3}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt1">          
+                {{text}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio2}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt2">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio6}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt3">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 2 -->
+
+
+
+        <!-- 3 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion3}}
+        <h3>{{question}}</h3>   
+        {{/each}}    
+        {{#each getsrc3}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio1}}
+            <input class="form-check-input" type="radio" name="q3q3" id="mp3q3opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt1">          
+                {{text}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q3" id="q3q3opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt2">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio7}}
+            <input class="form-check-input" type="radio" name="q3q3" id="q3q3opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt3">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 3 -->
+
+
+
+
+
+        <!-- 4 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion4}}
+        <h3>{{question}}</h3>   
+        {{/each}}    
+        {{#each getsrc4}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio6}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q4opt1">          
+                {{text}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt2" value="{{value}}">
+            <label class="form-check-label" for="q4opt2">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio7}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q4opt3">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 4 -->
+
+
+
+
+        <!-- 5 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion5}}
+        <h3>{{question}}</h3>   
+        {{/each}}    
+        {{#each getsrc5}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio3}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt1">          
+                {{text}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt2">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio4}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt3">
+                {{text}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 5 -->
+
+    <div class='quiz-submit'>
+        <input type='Submit' class="btn btn-primary" style='float: right;' value="{{_ 'Check the answers!'}}">
+    </div>
+    </form>
+
+
+
+    {{else}}
+
+
+    <form>
+        <!-- 1 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion1}}   
+        <h3>{{questionhy}}</h3>     
+        {{/each}}    
+        {{#each getsrc1}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio1}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt1">          
+                {{texthy}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio2}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt2">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio4}}
+            <input class="form-check-input" type="radio" name="q3q1" id="q3q1opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q1opt3">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 1 -->
+
+
+
+
+        <!-- 2 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion2}}
+        <h3>{{questionhy}}</h3>   
+        {{/each}}    
+        {{#each getsrc2}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio3}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt1">          
+                {{texthy}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio2}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt2">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio6}}
+            <input class="form-check-input" type="radio" name="q3q2" id="q3q2opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q2opt3">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 2 -->
+
+
+
+        <!-- 3 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion3}}
+        <h3>{{questionhy}}</h3>   
+        {{/each}}    
+        {{#each getsrc3}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio>
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio1}}
+            <input class="form-check-input" type="radio" name="q3q3" id="q3q3opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt1">          
+                {{texthy}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q3" id="q3q3opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt2">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio7}}
+            <input class="form-check-input" type="radio" name="q3q3" id="q3q3opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q3opt3">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 3 -->
+
+
+
+
+
+        <!-- 4 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion4}}
+        <h3>{{questionhy}}</h3>   
+        {{/each}}    
+        {{#each getsrc4}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}}
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio6}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q4opt1">          
+                {{texthy}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q4opt2">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio7}}
+            <input class="form-check-input" type="radio" name="q3q4" id="q3q4opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q4opt3">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 4 -->
+
+
+
+
+        <!-- 5 -->
+    <div class='quiz-item'> 
+        <div>
+        {{#each getQuestion5}}
+        <h3>{{questionhy}}</h3>   
+        {{/each}}   
+        {{#each getsrc5}}
+        <audio controls>
+            <source src='/music/quiz3_music/{{fileName}}' type='audio/mpeg'>
+                {{_ "Your browser does not support this audio type"}}
+        </audio> 
+        {{/each}} 
+        </div>
+        <hr>
+        <div class="form-check">
+            {{#each getRadio3}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt1" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt1">          
+                {{texthy}}    
+            </label>
+            {{/each}}     
+        </div>
+
+        <div class="form-check">
+            {{#each getRadio5}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt2" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt2">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+        <div class="form-check">
+            {{#each getRadio4}}
+            <input class="form-check-input" type="radio" name="q3q5" id="q3q5opt3" value="{{value}}">
+            <label class="form-check-label" for="q3q5opt3">
+                {{texthy}}
+            </label>
+            {{/each}}
+        </div>
+    </div>
+        <!-- 5 -->
+
+
+    <div class='quiz-submit'> 
+        <input type='Submit' class="btn btn-primary" style='float: right;' value="{{_ 'Check the answers!'}}">
+    </div>
+    </form>
+    {{/if}}
+</div>
 
 </template>
