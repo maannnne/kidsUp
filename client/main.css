@@ -49,6 +49,10 @@ audio {
   width: 45%;
 }
 
+.gal-image-container {
+  text-align: center;
+
+}
 
 a{
   margin: 5px;

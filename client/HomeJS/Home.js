@@ -29,7 +29,7 @@ Template.Feed.helpers ({
     },
     noFeedItems: function() {
         var currentUser = Meteor.userId();
-        if((Q1Results.find({userID: currentUser}).fetch().length === 0) && (Q2Results.find({userID: currentUser}).fetch().length === 0)){
+        if((Q1Results.find({userID: currentUser}).fetch().length === 0) && (Q2Results.find({userID: currentUser}).fetch().length === 0) && (Q3Results.find({userID: currentUser}).fetch().length === 0)){
             console.log(Q1Results.find({userID: currentUser}).fetch().length);
             return true;
         }
@@ -38,8 +38,5 @@ Template.Feed.helpers ({
             console.log(`from else ${Q2Results.find({userID: currentUser}).fetch().length}`);
             return false;
         }     
-    },
-    clearFeedItems: function() {
-        
     }
 });
