@@ -67,6 +67,15 @@
                 {{/each}}
             </div>
         {{/if}}
+        {{#if getQuiz3FeedItems}}
+        <hr>
+        <h4>{{_ "Armenian Music"}}</h4>
+        <div class="feed-group">
+            {{#each getQuiz3FeedItems}}
+            <p class="feed-group-item">{{_ 'You scored'}} {{score}}/5 {{_ "points in 'Armenian Music' quiz"}}, {{date}} </p>
+            {{/each}}
+        </div>
+        {{/if}}
     {{/if}}
 
     <!-- <footer style='bottom: 0; position: fixed; right: 100px;'>

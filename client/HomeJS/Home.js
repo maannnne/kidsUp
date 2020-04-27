@@ -9,22 +9,25 @@ import '../main.html';
 import '../main';
 import '../templates/Home';
 
-
 TAPi18n.setLanguage(localStorage.getItem('currentLanguage') || 'en');
 
 Template.Feed.helpers ({
-    'getQuiz1FeedItems': function() {
-        var currentUser = Meteor.userId();
+    getQuiz1FeedItems: function() {
+        const currentUser = Meteor.userId();
         return Q1Results.find({userID: currentUser}, {sort: {sortingDate: -1}}).fetch();
     },
-    'getQuiz2FeedItems': function() {
+    getQuiz2FeedItems: function() {
         var currentUser = Meteor.userId();
         return Q2Results.find({userID: currentUser}, {sort: {sortingDate: -1}}).fetch();
     },
-    'getUserEmail': function() {
+    getQuiz3FeedItems: function() {
+        var currentUser = Meteor.userId();
+        return Q3Results.find({userID: currentUser}, {sort: {sortingDate: -1}}).fetch();
+    },
+    getUserEmail: function() {
         return Meteor.users.find({_id: Meteor.userId()});
     },
-    'noFeedItems': function() {
+    noFeedItems: function() {
         var currentUser = Meteor.userId();
         if((Q1Results.find({userID: currentUser}).fetch().length === 0) && (Q2Results.find({userID: currentUser}).fetch().length === 0)){
             console.log(Q1Results.find({userID: currentUser}).fetch().length);
@@ -36,7 +39,7 @@ Template.Feed.helpers ({
             return false;
         }     
     },
-    'clearFeedItems': function() {
+    clearFeedItems: function() {
         
     }
 });

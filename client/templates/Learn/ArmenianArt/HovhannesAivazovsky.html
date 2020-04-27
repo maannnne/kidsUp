@@ -9,10 +9,12 @@
         <hr>
         <h3>{{_ "Hovhannes Aivazovsky"}}</h3>
         <div class='div-border'>
-            <div>
-                <img alt="hovhannes-aivazovsky" src='/images/learn_pics/aivazovsky-1.jpg' width='35%'>
+
+            <div class='image-container'>
+                <img alt="hovhannes-aivazovsky" src='/images/learn_pics/aivazovsky-1.jpg' width='75%'>
             </div>
-            <div class='info-container' style="top: 220px; left: 270px"> <!-- fuckkkkkkk -->
+
+            <div class='info-container'>
                 {{#each getPar0}}
                     {{#if getCurrentLanguage}}
                     <!-- english content -->
@@ -33,6 +35,7 @@
                     {{/if}}
                 {{/each}}
             </div>
+
         </div>
             
         {{#if getCurrentLanguage}}
