@@ -8,37 +8,42 @@ import '../main';
 import '../templates/Learn/ArmenianArt/HovhannesAivazovsky';
 
 
+
+
 Template.hovhannesAivazovsky.helpers ({
-    'getPar0': function() {
+    getPar0: function() {
         return LearnAivazovsky.find({parID: 0});
     },
-    'getPar1': function() {
+    getPar1: function() {
         return LearnAivazovsky.find({parID: 1});
     },
-    'getPar2': function() {
+    getPar2: function() {
         return LearnAivazovsky.find({parID: 2});
     },
-    'getPar3': function() {
+    getPar3: function() {
         return LearnAivazovsky.find({parID: 3});
     },
-    'getPar4': function() {
+    getPar4: function() {
         return LearnAivazovsky.find({parID: 4});
     },
-    'getPar5': function() {
+    getPar5: function() {
         return LearnAivazovsky.find({parID: 5});
     },
-    'getPar6': function() {
+    getPar6: function() {
         return LearnAivazovsky.find({parID: 6});
     },
-    'getPar7': function() {
+    getPar7: function() {
         return LearnAivazovsky.find({parID: 7});
     },
-    'getCurrentLanguage': function() {
+    getCurrentLanguage: function() {
         //console.log(typeof TAPi18n.getLanguage());
         if(TAPi18n.getLanguage() === 'en')
             return true;
         else 
             return false;
+    },
+    'allLoaded': function() {
+        return Session.get('allLoaded');
     }
 
 });

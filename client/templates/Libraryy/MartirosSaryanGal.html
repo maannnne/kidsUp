@@ -1,8 +1,8 @@
 <template name="MartirosSaryanGal">
+    <script>
+        document.title = 'Martiros Saryan Gallery'
+    </script>
     {{#if currentUser}}
-        <script>
-            document.title = 'Martiros Saryan Gallery'
-        </script>
         <div class="container">
             <a href="{{pathFor route='media'}}" class="btn btn-primary" style='float: right;'>{{_ "To Gallery"}}</a>
             <a href="{{pathFor route='martiros-saryan'}}" class="btn btn-primary" style='float: right;'>{{_ "Read About Saryan"}}</a>
@@ -59,9 +59,8 @@
             </div>
         </div>
     {{else}}
-        <script>
-            document.title = 'Martiros Saryan Gallery';
-        </script>
-        <h3>please don't try to access anything without logging in արա էյ օյ, thank you :)</h3>
+        <div class='loading-or-no-user'>
+            <h3>...</h3>
+        </div>
     {{/if}}
 </template>

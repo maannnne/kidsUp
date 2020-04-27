@@ -241,3 +241,9 @@ a :hover {
   text-align: center !important; */
   display: inline-block !important;
 }
+
+.loading-or-no-user {
+  text-align: center;
+  padding-top: 40%;
+}
+
